@@ -1,12 +1,19 @@
 import  express from "express";
 import {
-    fetchAllReviews
+    createReview,
+    deleteReview,
+    fetchAllReviews,
+    fetchReview,
+    updateReview
 } from '../controllers/reviewController';
+import { verifyAccessToken } from "../middleware/verifyToken";
 
 const router = express.Router()
 
 router.get('/', fetchAllReviews)
+router.get('/:id', fetchReview)
+router.post('/', createReview)
 
-
-
+router.patch('/:id',verifyAccessToken, updateReview)
+router.delete('/:id',verifyAccessToken, deleteReview)
 export default router
