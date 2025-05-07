@@ -1,9 +1,9 @@
-import { Request, Response } from "express";
-import Book from '../models/Book'
+import { Request, Response } from 'express';
+import Book from '../models/Book';
 
 export const getAllBooks = async (req: Request, res: Response) => {
-    try {
-        const search = req.query.search;
+	try {
+		const search = req.query.search;
 		const sort = req.query.sort;
 
 		let searchQuery: any = {};
@@ -24,9 +24,9 @@ export const getAllBooks = async (req: Request, res: Response) => {
 		const books = await query;
 
 		res.json(books);
-    } catch (error: unknown) {
+	} catch (error: unknown) {
 		const message = error instanceof Error ? error.message : 'Unknown error';
 		res.status(500).json({ error: message });
 	}
-}
+};
 
