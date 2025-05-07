@@ -13,6 +13,12 @@ app.use(cors({
     credentials: true
 }));
 
+
+import reviewRouter from './routes/reviewRouter'
+app.use('/reviews', reviewRouter)
+
+
+
 mongoose.connect(process.env.MONGODB_URL || "");
 
 const PORT = 3000
