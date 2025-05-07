@@ -10,7 +10,7 @@ export const fetchAllUsers = async (req: Request, res: Response) =>{
         res.status(500).json({error:message})
     }
     
-}
+};
 
 export const fetchOneUser = async (req: Request, res: Response) => {
     const { id } = req.params;
@@ -27,9 +27,9 @@ export const fetchOneUser = async (req: Request, res: Response) => {
       const message = error instanceof Error ? error.message : 'Unknown error';
       res.status(500).json({ error: message });
     }
-  };
+};
 
-  export const updateUser = async (req: Request, res: Response) => {
+export const updateUser = async (req: Request, res: Response) => {
     const {username, password, is_admin} = req.body;
 
     try {
@@ -54,4 +54,19 @@ export const fetchOneUser = async (req: Request, res: Response) => {
       res.status(500).json({error:message})
     }
 
-  }
+};
+
+export const deleteUser = async (req: Request, res: Response) => {
+    try {
+        const deletedUser = await User.deleteOne({_id: req.params.id});
+
+        if (deletedUser.deletedCount === 0) {
+            res.status(404).json({success: false, message: 'User not found'});
+            return
+        }
+        res.json({message: 'User deleted'});
+    } catch (error: unknown) {
+        const message = error instanceof Error ? error.message: 'Unknown error'
+        res.status(500).json({error: message})
+    }
+}
