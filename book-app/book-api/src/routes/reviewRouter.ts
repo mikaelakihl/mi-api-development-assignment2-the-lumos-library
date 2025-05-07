@@ -1,6 +1,7 @@
 import  express from "express";
 import {
     createReview,
+    deleteReview,
     fetchAllReviews,
     fetchReview,
     updateReview
@@ -14,4 +15,5 @@ router.get('/:id', fetchReview)
 router.post('/', createReview)
 
 router.patch('/:id',verifyAccessToken, updateReview)
+router.delete('/:id', deleteReview)
 export default router
