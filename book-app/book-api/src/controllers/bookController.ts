@@ -48,9 +48,8 @@ export const getBookById = async (req: Request, res: Response) => {
 };
 
 export const createBook = async (req: Request, res: Response) => {
-	const { title, description, author, genres, image, published_year } = req.body;
-
-	try {
+    try {
+        const { title, description, author, genres, image, published_year } = req.body;
 		if (
 			title === undefined ||
 			description === undefined ||
@@ -79,3 +78,5 @@ export const createBook = async (req: Request, res: Response) => {
 		res.status(500).json({ error: message });
 	}
 };
+
+
