@@ -23,3 +23,19 @@ export const fetchReview = async (req: Request,res: Response) => {
         res.status(500).json({error: message})
     }
 }
+
+export const createReview = async (req: Request, res: Response) => {
+    const {name,content,rating} = req.body
+    try {
+        const review = new Review({
+            name: name,
+            content: content,
+            rating: rating,
+        })
+        const savedPun = await review.save();
+        res.status(201).json({message: 'review created', data: savedPun})
+    } catch(error: unknown) {
+        const message = error instanceof Error ? error.message : 'unknown error'
+        res.status(500).json({error:message})
+    }
+}
