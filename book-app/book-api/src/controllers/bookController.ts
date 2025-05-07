@@ -48,8 +48,8 @@ export const getBookById = async (req: Request, res: Response) => {
 };
 
 export const createBook = async (req: Request, res: Response) => {
-    try {
-        const { title, description, author, genres, image, published_year } = req.body;
+	try {
+		const { title, description, author, genres, image, published_year } = req.body;
 		if (
 			title === undefined ||
 			description === undefined ||
@@ -79,4 +79,45 @@ export const createBook = async (req: Request, res: Response) => {
 	}
 };
 
+export const updateBook = async (req: Request, res: Response) => {
+	try {
+		const id = req.params.id;
+		const { title, description, author, genres, image, published_year } = req.body;
 
+		if (
+			title === undefined ||
+			description === undefined ||
+			author === undefined ||
+			genres === undefined ||
+			image === undefined ||
+			published_year === undefined
+		) {
+			res.status(400).json({ error: 'All fields must be provided' });
+			return;
+		}
+
+		const updatedBook = await Book.updateOne(
+			{ _id: id },
+			{
+				$set: {
+					content: title,
+					description: description,
+					author: author,
+					genres: genres,
+					image: image,
+					published_year: published_year,
+				},
+			}
+		);
+
+		if (updatedBook.matchedCount === 0) {
+			res.status(404).json({ error: 'Book not found. Could not update.' });
+			return;
+		}
+
+		res.status(200).json({ message: 'Book is now updated.', id: parseInt(id) });
+	} catch (error: unknown) {
+		const message = error instanceof Error ? error.message : 'Unknown error';
+		res.status(500).json({ error: message });
+	}
+};
