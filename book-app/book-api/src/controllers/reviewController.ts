@@ -39,3 +39,26 @@ export const createReview = async (req: Request, res: Response) => {
         res.status(500).json({error:message})
     }
 }
+
+export const updateReview = async (req: Request, res: Response) => {
+    const {name,content,rating} = req.body
+    try {
+        const updatedReview = await Review.updateOne(
+            {_id: req.params.id},
+            {$set: {
+                name: name,
+                content: content,
+                rating: rating,
+                }
+            }
+        )
+        if(updatedReview.matchedCount === 0) {
+            res.status(404).json({success: false, message: 'Review not Found'})
+            return
+        }
+        res.json({message: 'review created', data: await Review.findById(req.params.id)})
+    } catch (error: unknown) {
+        const message = error instanceof Error ? error.message : 'unknown error'
+        res.status(500).json({error: message})
+    }
+}
