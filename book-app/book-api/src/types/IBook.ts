@@ -1,4 +1,4 @@
-import { IReview } from "./IReview";
+import { IReviews } from "./IReviews";
 
 export interface IBook {
 	title: string;
@@ -7,5 +7,5 @@ export interface IBook {
 	genres: string[];
 	image: string;
 	published_year: number;
-	reviews: IReview[];
+	reviews: IReviews[];
 }
