@@ -28,3 +28,30 @@ export const fetchOneUser = async (req: Request, res: Response) => {
       res.status(500).json({ error: message });
     }
   };
+
+  export const updateUser = async (req: Request, res: Response) => {
+    const {username, password, is_admin} = req.body;
+
+    try {
+        const updatedUser = await User.updateOne(
+            {_id : req.params.id},
+            {$set: {
+                username: username,
+                password: password,
+                is_admin: is_admin,
+            }
+           }
+        );
+
+        if (updatedUser.matchedCount === 0) {
+            res.status(404).json({success: false, message: 'User not found'});
+            return
+        }
+        res.json({message: 'User updated', data: await User.findById(req.params.id)});
+
+    } catch (error: unknown) {
+      const message = error instanceof Error ? error.message: 'Unknown error'
+      res.status(500).json({error:message})
+    }
+
+  }
