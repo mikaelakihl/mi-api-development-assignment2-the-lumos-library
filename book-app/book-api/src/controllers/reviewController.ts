@@ -9,3 +9,17 @@ export const fetchAllReviews = async (_: Request,res: Response) => {
         res.status(500).json({error: message})
     }
 }
+
+export const fetchReview = async (req: Request,res: Response) => {
+    try {
+        const review = await Review.findOne({_id: req.params.id})
+        if(!review) {
+            res.status(404).json({message: 'Review not Found'})
+            return;
+        }
+        res.json(review);
+    } catch(error: unknown) {
+        const message = error instanceof Error ? error.message: 'Unknown error'
+        res.status(500).json({error: message})
+    }
+}
