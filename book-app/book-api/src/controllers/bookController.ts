@@ -23,7 +23,7 @@ export const getAllBooks = async (req: Request, res: Response) => {
 
 		const books = await query;
 
-		res.json(books);
+		res.status(200).json(books);
 	} catch (error: unknown) {
 		const message = error instanceof Error ? error.message : 'Unknown error';
 		res.status(500).json({ error: message });
