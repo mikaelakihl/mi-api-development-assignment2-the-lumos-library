@@ -15,6 +15,12 @@ app.use(cors({
 
 import userRouter from './routes/userRouter';
 app.use('/users',userRouter);
+import bookRouter from './routes/bookRouter';
+app.use('/books', bookRouter);
+import reviewRouter from './routes/reviewRouter'
+app.use('/reviews', reviewRouter)
+
+
 
 mongoose.connect(process.env.MONGODB_URL || "");
 
