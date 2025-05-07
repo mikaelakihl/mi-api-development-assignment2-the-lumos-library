@@ -15,5 +15,5 @@ router.get('/:id', fetchReview)
 router.post('/', createReview)
 
 router.patch('/:id',verifyAccessToken, updateReview)
-router.delete('/:id', deleteReview)
+router.delete('/:id',verifyAccessToken, deleteReview)
 export default router
