@@ -13,6 +13,8 @@ app.use(cors({
     credentials: true
 }));
 
+import bookRouter from './routes/bookRouter';
+app.use('/books', bookRouter);
 
 import reviewRouter from './routes/reviewRouter'
 app.use('/reviews', reviewRouter)
