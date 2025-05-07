@@ -31,3 +31,5 @@ const BookSchema = new Schema<IBook>({
     },
     reviews: [{type: Schema.Types.ObjectId, ref: 'Reviews'}]
 })
+
+export default mongoose.model('Books', BookSchema);
