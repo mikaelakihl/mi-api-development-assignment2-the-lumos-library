@@ -52,7 +52,7 @@ export const loginUser = async (req: Request, res: Response) => {
     }
   };
 
-  export const register = async (req: Request, res: Response) => {
+  export const registerUser = async (req: Request, res: Response) => {
     const {username, password, is_admin} = req.body;
  
     if (!username || !password) {
