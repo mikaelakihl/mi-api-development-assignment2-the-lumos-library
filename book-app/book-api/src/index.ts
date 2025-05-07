@@ -22,6 +22,9 @@ app.use('/reviews', reviewRouter)
 
 
 
+import authRouter from './routes/authRouter';
+app.use('/auth',authRouter);
+
 mongoose.connect(process.env.MONGODB_URL || "");
 
 const PORT = 3000
