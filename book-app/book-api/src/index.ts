@@ -13,6 +13,9 @@ app.use(cors({
     credentials: true
 }));
 
+import userRouter from './routes/userRouter';
+app.use('/users',userRouter);
+
 mongoose.connect(process.env.MONGODB_URL || "");
 
 const PORT = 3000
