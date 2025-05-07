@@ -30,3 +30,19 @@ export const getAllBooks = async (req: Request, res: Response) => {
 	}
 };
 
+export const getBookById = async (req: Request, res: Response) => {
+	try {
+		const id = req.params.id;
+		const book = await Book.findById(id).populate('reviews');
+
+		if (!book) {
+			res.status(404).json({ message: 'Book not found' });
+			return;
+		}
+
+		res.status(200).json(book);
+	} catch (error: unknown) {
+		const message = error instanceof Error ? error.message : 'Unknown error';
+		res.status(500).json({ error: message });
+	}
+};
