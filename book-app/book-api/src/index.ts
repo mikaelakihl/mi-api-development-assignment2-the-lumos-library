@@ -13,13 +13,17 @@ app.use(cors({
     credentials: true
 }));
 
+import userRouter from './routes/userRouter';
+app.use('/users',userRouter);
 import bookRouter from './routes/bookRouter';
 app.use('/books', bookRouter);
-
 import reviewRouter from './routes/reviewRouter'
 app.use('/reviews', reviewRouter)
 
 
+
+import authRouter from './routes/authRouter';
+app.use('/auth',authRouter);
 
 mongoose.connect(process.env.MONGODB_URL || "");
 
