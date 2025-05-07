@@ -46,3 +46,36 @@ export const getBookById = async (req: Request, res: Response) => {
 		res.status(500).json({ error: message });
 	}
 };
+
+export const createBook = async (req: Request, res: Response) => {
+	const { title, description, author, genres, image, published_year } = req.body;
+
+	try {
+		if (
+			title === undefined ||
+			description === undefined ||
+			author === undefined ||
+			genres === undefined ||
+			image === undefined ||
+			published_year === undefined
+		) {
+			res.status(400).json({ error: 'All fields must be provided' });
+			return;
+		}
+
+		const book = new Book({
+			content: title,
+			description: description,
+			author: author,
+			genres: genres,
+			image: image,
+			published_year: published_year,
+		});
+
+		const savedBook = await book.save();
+		res.status(201).json({ message: 'Book created', data: savedBook });
+	} catch (error: unknown) {
+		const message = error instanceof Error ? error.message : 'Unknown error';
+		res.status(500).json({ error: message });
+	}
+};
