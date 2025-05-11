@@ -50,12 +50,15 @@ onMounted(fetchBooks);
 			</form>
       <div class="book-list" id="book-list" v-for="book in books" :key="book._id">
         <article>
-          <h3>{{ book.title }}</h3>
-          <p>{{ book.author }}</p>
-          <p>{{ book.published_year }}</p>
-          <li v-for="(genre, i) in book.genres" :key="i">
-            {{ genre }}
-          </li>
+          <div class="book-container">
+            <h3>{{ book.title }}</h3>
+            <p>{{ book.author }}</p>
+            <p>{{ book.published_year }}</p>
+            <li v-for="(genre, i) in book.genres" :key="i">
+              {{ genre }}
+            </li>
+          </div>
+          <img :src="book.image"/> <!-- TODO: Add size and other relevant attributes for image-elements -->
         </article>
       </div>
 		</section>
