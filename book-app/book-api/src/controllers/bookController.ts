@@ -11,14 +11,14 @@ export const getAllBooks = async (req: Request, res: Response) => {
 		let sortQuery = {};
 
 		if (search) {
-			searchQuery.content = { $regex: search, $options: 'i' };
+			searchQuery.title = { $regex: search, $options: 'i' };
 		}
 
 		let query = Book.find(searchQuery);
 
 		if (sort) {
 			const orderBy = sort === 'desc' ? -1 : 1;
-			sortQuery = { content: +orderBy };
+			sortQuery = { title: +orderBy };
 			query = Book.find(searchQuery).sort(sortQuery);
 		}
 
