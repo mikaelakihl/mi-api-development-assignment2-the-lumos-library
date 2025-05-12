@@ -1,5 +1,6 @@
 <script setup>
 import { onMounted, ref } from 'vue';
+import { RouterLink } from 'vue-router';
 
 const API_URL = import.meta.env.VITE_API_URL;
 const books = ref([]);
@@ -60,7 +61,7 @@ onMounted(fetchBooks);
 						<li v-for="(genre, i) in book.genres" :key="i">
 							{{ genre }}
 						</li>
-						<button>Read more<span class="material-symbols-outlined"> trending_flat </span></button>
+						<RouterLink :to="`/books/${book._id}`">Read more<span class="material-symbols-outlined"> trending_flat </span></RouterLink>
 					</div>
 					<img :src="book.image" />
 					<!-- TODO: Add size and other relevant attributes for image-elements -->
