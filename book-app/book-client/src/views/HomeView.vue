@@ -27,6 +27,7 @@ const fetchBooks = async () => {
 };
 
 onMounted(fetchBooks);
+
 </script>
 
 <template>
