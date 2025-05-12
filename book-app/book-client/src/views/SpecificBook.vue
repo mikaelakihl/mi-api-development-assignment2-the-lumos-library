@@ -31,11 +31,27 @@ onMounted(fetchBook);
     <ul>
       <li v-for="(genre, index) in book.genres" :key="index">{{ genre }}</li>
     </ul>
+    <section v-if="book.reviews && book.reviews.length">
+        <h2>Reviews</h2>
+        <ul>
+            <li v-for="(review, i) in book.reviews" :key="i">
+            <p><strong>{{ review.name }}:</strong> {{ review.content }}</p>
+            <p>Rating: {{ review.rating }}/5</p>
+            </li>
+        </ul>
+    </section>
+    <section v-else>
+        <p>No reviews yet.</p>
+    </section>
   </main>
   <p v-else>Loading book...</p>
 </template>
 
 
-<style lang="scss" scoped>
+<style lang="scss" >
+
+    main{
+        background-color: $color-background;
+    }
 
 </style>
