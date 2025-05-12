@@ -54,6 +54,7 @@ onMounted(fetchBooks);
 			</form>
 			<div class="book-list" id="book-list" v-for="book in books" :key="book._id">
 				<article>
+					<img :src="book.image" />
 					<div class="book-container">
 						<h3>{{ book.title }}</h3>
 						<p>{{ book.author }}</p>
@@ -63,7 +64,6 @@ onMounted(fetchBooks);
 						</li>
 						<RouterLink :to="`/books/${book._id}`">Read more<span class="material-symbols-outlined"> trending_flat </span></RouterLink>
 					</div>
-					<img :src="book.image" />
 					<!-- TODO: Add size and other relevant attributes for image-elements -->
 				</article>
 			</div>
