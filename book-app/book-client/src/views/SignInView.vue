@@ -82,8 +82,8 @@ async function login() {
 
 .authview-form-button{
     font-size: $h-small-mobile;
-    // padding-right: 5rem;
-    // padding-left: 5rem;
+    padding-right: 5rem;
+    padding-left: 5rem;
 }
 
 
