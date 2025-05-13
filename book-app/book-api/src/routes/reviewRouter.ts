@@ -5,14 +5,13 @@ import {
   fetchAllReviews,
   fetchReview,
   updateReview,
-  getReviewsForBook
 } from '../controllers/reviewController';
 import { verifyAccessToken } from "../middleware/verifyToken";
 
 const router = express.Router();
 
 
-router.get('/books/:bookId/reviews', getReviewsForBook);
+
 router.post('/books/:bookId/reviews', createReview);
 
 router.get('/', fetchAllReviews);

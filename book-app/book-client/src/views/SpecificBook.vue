@@ -56,16 +56,18 @@ onMounted(fetchBook);
 
 <template>
   <main v-if="book">
-    <h1>{{ book.title }}</h1>
-    <img :src="book.image" alt="Book cover" />
-    <p><strong>Author:</strong> {{ book.author }}</p>
-    <p><strong>Published:</strong> {{ book.published_year }}</p>
-    <p><strong>Description:</strong> {{ book.description }}</p>
-    <p><strong>Genres:</strong></p>
-    <ul>
-      <li v-for="(genre, index) in book.genres" :key="index">{{ genre }}</li>
-    </ul>
-
+    <div>
+      <h1>{{ book.title }}</h1>
+      <img :src="book.image" alt="Book cover" />
+      <p><strong>Author:</strong> {{ book.author }}</p>
+      <p><strong>Published:</strong> {{ book.published_year }}</p>
+      <p><strong>Description:</strong> {{ book.description }}</p>
+      <p><strong>Genres:</strong></p>
+      <ul>
+        <li v-for="(genre, index) in book.genres" :key="index">{{ genre }}</li>
+      </ul>
+    </div>
+    
     <section>
       <h2>Add a Review</h2>
       <form @submit.prevent="submitReview">
@@ -109,9 +111,6 @@ onMounted(fetchBook);
 
 <style lang="scss" scoped>
 
-    h1{
-        font-family: $font-title;
-        color: $color-red;
-    }
+
 
 </style>
