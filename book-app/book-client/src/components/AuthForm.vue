@@ -58,7 +58,8 @@
 <style lang="scss" scoped>
 
 h2{
-    font-size: $h-small;
+    font-size: $h-medium-mobile;
+    margin-bottom: 2rem;
 }
 
 .authview-hero-section{
@@ -76,6 +77,7 @@ h2{
     width: 100%;
     object-fit: cover;
     z-index: 0;
+    filter: blur(4px);
 }
 
 .authview-hero-content{
@@ -101,6 +103,7 @@ h2{
     flex-direction: column;
     align-items: center;
     margin: 1rem;
+    gap: 1rem;
     
 
     input{
@@ -146,6 +149,7 @@ h2{
 
 .authview-form-label{
     text-align: left;
+    font-size: $h-small-mobile;
 }
 
 </style>
