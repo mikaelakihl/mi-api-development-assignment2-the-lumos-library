@@ -2,9 +2,11 @@
  import { ref, watchEffect } from 'vue'
 
  const props = defineProps({
+    title: String,
     submitText: String,
     onSubmitHandler: Function,
     errorMessage: String
+    
  })
 
  const emit = defineEmits (['update:username', 'update:password'])
@@ -24,10 +26,11 @@
 </script>
 
 <template>
-    <!-- <section>
-    <img>
+    <section>
+    <img src="../assets/images/heroimg-fantasy-book.jpg">
     <div>
-        <a>Back</a> -->
+        <a>Back</a>
+        <h2> {{ title }}</h2>
         <form @submit.prevent="onSubmit">
             <label>Username:</label>
             <input v-model="username" type="text" id="userName" name="username" required >
@@ -38,6 +41,6 @@
             <p v-if="errorMessage">{{ errorMessage }}</p>
             
         </form>
-    <!-- </div>
-   </section> -->
+    </div>
+   </section>
 </template>

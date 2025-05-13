@@ -37,12 +37,8 @@ async function login() {
 </script>
 
 <template>
-   <section>
-    <!-- <img> -->
-    <div>
-        <a>Back</a>
-        <h2>Welcome to the Lumos Library</h2>
         <AuthForm
+            :title="'Welcome to the Lumos Library'"
             :submitText="'Logga in'"
             :onSubmitHandler="login"
             :errorMessage="error"
@@ -51,8 +47,6 @@ async function login() {
         >
             <button type="button" @click="router.push('/register')">Register</button>
         </AuthForm>
-    </div>
-   </section>
 </template>
 
 <style  scoped>
