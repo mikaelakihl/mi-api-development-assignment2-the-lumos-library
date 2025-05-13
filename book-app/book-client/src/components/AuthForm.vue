@@ -96,6 +96,7 @@ h2{
     opacity: 85%;
     width: 100%;
     text-align: center;
+    border-radius: $border-large;
 }
 
 .authview-form-container{
@@ -150,6 +151,62 @@ h2{
 .authview-form-label{
     text-align: left;
     font-size: $h-small-mobile;
+    width: 100%;
+
+}
+
+@media (min-width: 700px) {
+
+    .authview-hero-content{
+        width: 80%;
+        // height: 50%;
+       
+        
+    }
+
+    .authview-hero-section{
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .authview-hero-wrapper{
+        padding: 3rem;
+    }
+
+    .authview-go-back-link{
+        margin-top: 0;
+        margin-bottom: 4rem;
+    }
+
+
+}
+
+@media (min-width: 1200px) {
+
+    h2{
+        font-size: $h-medium;
+    }
+
+    .authview-hero-content{
+        width: 50%;
+        // height: 50%;
+       
+        
+    }
+
+    .authview-form-button{
+        font-size: $h-small-mobile;
+        // padding-right: 5rem;
+        // padding-left: 5rem;
+    }
+
+    .authview-form-button-container{
+        margin-top: 1rem;
+    }
+
+  
 }
 
 </style>
