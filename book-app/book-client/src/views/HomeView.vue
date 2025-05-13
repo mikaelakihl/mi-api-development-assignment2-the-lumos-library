@@ -76,7 +76,7 @@ main {
 	margin-top: 5rem;
 }
 
-@media screen and (min-width: 768) {
+@media screen and (min-width: 768px) {
 	main {
 		margin-top: 0;
 	}
