@@ -2,6 +2,9 @@ import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import SpecificBook from '@/views/SpecificBook.vue'
 import SignInView from '@/views/SignInView.vue'
+import AdminView from '@/views/admin/AdminView.vue'
+import AdminUsersView from '@/views/admin/AdminUsersView.vue'
+import AdminBooksView from '@/views/admin/AdminBooksView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -20,6 +23,21 @@ const router = createRouter({
       path: '/sign-in',
       name: 'sign-in',
       component: SignInView,
+    },
+    {
+      path: '/admin',
+      name: 'admin-dashboard',
+      component: AdminView,
+    },
+    {
+      path: '/admin-users',
+      name: 'admin-dashboard',
+      component: AdminUsersView,
+    },
+    {
+      path: '/admin-books',
+      name: 'admin-dashboard',
+      component: AdminBooksView,
     }
   ],
 })
