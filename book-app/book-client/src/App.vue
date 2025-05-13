@@ -1,8 +1,20 @@
 <script setup>
-import { RouterView } from 'vue-router';
+import { RouterView, useRoute } from 'vue-router';
 import MenuDesktop from './fixtures/MenuDesktop.vue';
 import MenuMobile from './fixtures/MenuMobile.vue';
-import { onMounted, onUnmounted, ref } from 'vue';
+import { computed, onMounted, onUnmounted, ref } from 'vue';
+
+// const isLoggedIn = ref(true); // TODO: Fixa authentisering
+
+const route = useRoute();
+
+function checkIfAdminPage() {
+	return route.path.startsWith('/admin');
+}
+
+const isAdminPage = computed(checkIfAdminPage);
+
+// -----------------------------------------------------------
 
 const isMobile = ref(window.innerWidth <= 767);
 console.log('Is mobile?: ' + isMobile.value);
@@ -25,7 +37,7 @@ onUnmounted(removeResizeListener);
 </script>
 
 <template>
-	<div>
+	<div v-if="!isAdminPage">
 		<MenuMobile v-if="isMobile" />
 		<MenuDesktop v-else />
 	</div>
