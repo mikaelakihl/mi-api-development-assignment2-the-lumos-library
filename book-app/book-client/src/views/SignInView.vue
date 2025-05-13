@@ -1,10 +1,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
+import AuthForm  from '../components/AuthForm.vue'
 
 const username = ref('');
 const password = ref('');
 const router = useRouter()
+const error = ref('');
 
 async function login() {
     try {
@@ -36,19 +38,19 @@ async function login() {
 
 <template>
    <section>
-    <img>
+    <!-- <img> -->
     <div>
         <a>Back</a>
         <h2>Welcome to the Lumos Library</h2>
-        <form @submit.prevent="login">
-            <label>Username:</label>
-            <input v-model="username" type="text" id="userName" name="username" required >
-            <label>Password:</label>
-            <input v-model="password" type="password" id="password" name="password" required>
-            <button type="button">Register</button> // länk till registreringssidan 
-            <button type="submit">Log in</button>
-
-        </form>
+        <AuthForm
+            :submitText="'Logga in'"
+            :onSubmitHandler="login"
+            :errorMessage="error"
+            @update:username="username = $event"
+            @update:password="password = $event"
+        >
+            <button type="button" @click="router.push('/register')">Register</button>
+        </AuthForm>
     </div>
    </section>
 </template>
