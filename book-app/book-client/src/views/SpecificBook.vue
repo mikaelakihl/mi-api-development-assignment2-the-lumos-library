@@ -56,16 +56,30 @@ onMounted(fetchBook);
 
 <template>
   <main v-if="book">
-    <div>
-      <h1>{{ book.title }}</h1>
+
+    <div class="top-image">
       <img :src="book.image" alt="Book cover" />
-      <p><strong>Author:</strong> {{ book.author }}</p>
-      <p><strong>Published:</strong> {{ book.published_year }}</p>
-      <p><strong>Description:</strong> {{ book.description }}</p>
-      <p><strong>Genres:</strong></p>
-      <ul>
-        <li v-for="(genre, index) in book.genres" :key="index">{{ genre }}</li>
-      </ul>
+    </div>
+    <div class="back-btn-box">
+      <router-link class="button-back" to="/">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+          <p class="back-btn">Back</p>
+      </router-link>
+    </div>
+    <div class="book-section">
+      <div class="book-section-left">
+        <img :src="book.image" alt="Book cover" />
+      </div>
+      <div class="book-section-right">
+        <h1>{{ book.title }}</h1>
+        <p><strong>Author:</strong> {{ book.author }}</p>
+        <p><strong>Published:</strong> {{ book.published_year }}</p>
+        <p><strong>Description:</strong> {{ book.description }}</p>
+        <p><strong>Genres:</strong></p>
+        <ul>
+          <li v-for="(genre, index) in book.genres" :key="index">{{ genre }}</li>
+        </ul>
+      </div>
     </div>
     
     <section>
@@ -110,7 +124,62 @@ onMounted(fetchBook);
 
 
 <style lang="scss" scoped>
+  main{
+    .top-image{
+      width: 100%;
+      height: 400px;
+      
+      img{
+          width: 100%;       /* Ensure the image fits within the container */
+          height: 100%;      /* Ensure the image fits within the container */
+          object-fit: cover; 
+          object-position:  center;
+          filter: blur(4px);
+      }
+    }
+    .back-btn-box{
+      width: 120px;
+      height: 40px;
+      margin-left: 40px;
+        .button-back{
+          display: flex;
+          justify-content: end;
+          align-items: center;
+          text-decoration: none;
+            svg{
+              width: 50px;
+              height: 40px;
+              transform: scale(0.7);
+              transition: 0.5s ease-in-out;
+            }
+            .back-btn{
+              text-align: center; 
+              border: none;
+              font-size: 1.5rem;
+              cursor: pointer;
+              height: 100%;
+            }
+            &:hover{
+              svg{
+                margin-right: 20px;
+              }
+            }
+        }
+    }
 
-
+    .book-section{
+      height: 75vh;
+      width: 100%;
+      &-left{
+        width: 250px;
+        height: 400px;
+        margin-left: 40px;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
 
 </style>
