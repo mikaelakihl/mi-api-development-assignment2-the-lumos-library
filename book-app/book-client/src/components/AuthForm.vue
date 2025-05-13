@@ -124,10 +124,13 @@ h2{
         color: $color-white;
         min-height: 48px;
         min-width: 48px;
-        padding: 0.75rem 1.25rem;
+        // padding: 0.75rem 1.25rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
         font-family: $font-title;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: $h-small-mobile;
 }
 
 .authview-go-back-link {

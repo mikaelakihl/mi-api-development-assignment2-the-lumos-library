@@ -70,12 +70,17 @@ async function login() {
         margin-top: 1rem;
         text-decoration: none;
         font-family: $font-title;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        font-size: $h-small-mobile;
 }
 
 .authview-sign-in-without-login-wrapper{
     text-align: center;
     width: 100%&;
     margin-bottom: 1rem;
+    font-size: $h-small-mobile;
+    margin-top: 1rem;
 }
 
 @media (min-width: 1200px) {
