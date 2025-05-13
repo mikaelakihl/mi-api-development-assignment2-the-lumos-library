@@ -38,7 +38,7 @@ async function login() {
 
 <template>
         <AuthForm
-            :title="'Welcome to the Lumos Library'"
+            :title="'Welcome to The Lumos Library'"
             :submitText="'Log in'"
             :onSubmitHandler="login"
             :errorMessage="error"
