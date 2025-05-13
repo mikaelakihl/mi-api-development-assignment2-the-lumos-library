@@ -45,11 +45,34 @@ async function login() {
             @update:username="username = $event"
             @update:password="password = $event"
         >
-            <button type="button" @click="router.push('/register')">Register</button>
+            <button class="authview-form-button" type="button" @click="router.push('/register')">Register</button>
+            
+
+            <template #loginWithoutSignInLink>
+                <div class="authview-sign-in-without-login-wrapper">
+                    <a class="authview-form-button">Continue without signing in</a>
+                </div>
+            </template>
         </AuthForm>
 </template>
 
-<style  scoped>
+<style lang="scss" scoped>
 
+.authview-form-button{
+        border-radius: $border-small;
+        background-color: $color-red;
+        box-shadow: $drop-shadow;
+        color: $color-white;
+        min-height: 48px;
+        min-width: 48px;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 1rem;
+        margin-top: 1rem;
+}
+
+.authview-sign-in-without-login-wrapper{
+    text-align: center;
+    width: 100%&;
+}
 
 </style>
