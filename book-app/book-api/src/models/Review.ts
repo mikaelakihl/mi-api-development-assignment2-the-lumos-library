@@ -1,26 +1,24 @@
-import mongoose from "mongoose";
-import { IReviews } from "../types/IReviews";
+import mongoose, { Types } from "mongoose";
+
+// Define the interface
+export interface IReviews {
+  name: string;
+  content: string;
+  rating: number;
+  created_at?: Date;
+  book: Types.ObjectId;
+}
 
 const Schema = mongoose.Schema;
 
+// Define the schema using the interface
 const ReviewSchema = new Schema<IReviews>({
+  name: { type: String, required: true },
+  content: { type: String, required: true },
+  rating: { type: Number, required: true },
+  created_at: { type: Date, default: Date.now },
+  book: { type: Schema.Types.ObjectId, ref: 'Book', required: true },
+});
 
-    name: {
-        type: String,
-        required: true
-    },
-    content: {
-        type: String,
-        required: true
-    },
-    rating: {
-        type: Number,
-        required: true
-    },
-    created_at: {
-        type: Date,
-        default: Date.now
-    }
-})
-
-export default mongoose.model('Reviews', ReviewSchema)
+// Export the model
+export default mongoose.model<IReviews>('Reviews', ReviewSchema);
