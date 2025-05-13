@@ -27,8 +27,8 @@ onUnmounted(removeResizeListener);
 
 <template>
   <div>
-    <MenuDesktop v-if="isMobile" />
-    <MenuMobile v-else />
+    <MenuMobile v-if="isMobile" />
+    <MenuDesktop v-else />
   </div>
   <RouterView />
   
