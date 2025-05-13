@@ -1,12 +1,22 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
-import { RouterLink } from 'vue-router';
+import { RouterLink, useRoute } from 'vue-router';
 
+const route = useRoute();
 const isScrolled = ref(false);
 const screenHieght = ref(0);
 
 function checkScroll() {
-    screenHieght.value = window.innerHeight * 0.75; // TODO: Korrigera värdet om det behövs
+    
+    if (route.path === '/') {
+        screenHieght.value = window.innerHeight * 0.75; // TODO: Korrigera värdet om det behövs
+        console.log('Du ÄR inne på startsidan');
+
+    }else {
+        screenHieght.value = window.innerHeight * 0.375; // TODO: Korrigera värdet om det behövs
+        console.log('Du är inte inne på startsidan');
+    }
+    
     console.log('Screenheight: ' + screenHieght.value);
     
     if(window.scrollY > screenHieght.value) {
