@@ -34,6 +34,6 @@ onUnmounted(removeResizeListener);
   
 </template>
 
-<style  scoped>
+<style scoped>
 
 </style>

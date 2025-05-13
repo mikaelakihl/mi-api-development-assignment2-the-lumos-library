@@ -27,7 +27,6 @@ const fetchBooks = async () => {
 };
 
 onMounted(fetchBooks);
-
 </script>
 
 <template>
@@ -73,9 +72,13 @@ onMounted(fetchBooks);
 </template>
 
 <style lang="scss">
-
-body{
-  background-color: $color-background;
+main {
+	margin-top: 5rem;
 }
 
+@media screen and (min-width: 768) {
+	main {
+		margin-top: 0;
+	}
+}
 </style>
