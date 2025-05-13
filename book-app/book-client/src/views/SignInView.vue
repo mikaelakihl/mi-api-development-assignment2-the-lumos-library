@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
-import AuthForm  from '../components/AuthForm.vue'
+import AuthView from '../components/AuthView.vue'
 
 const username = ref('');
 const password = ref('');
@@ -37,7 +37,7 @@ async function login() {
 </script>
 
 <template>
-        <AuthForm
+        <AuthView
             :title="'Welcome to The Lumos Library'"
             :submitText="'Log in'"
             :onSubmitHandler="login"
@@ -53,7 +53,7 @@ async function login() {
                     <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
                 </div>
             </template>
-        </AuthForm>
+        </AuthView>
 </template>
 
 <style lang="scss" scoped>
