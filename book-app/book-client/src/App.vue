@@ -8,8 +8,8 @@ const isMobile = ref(window.innerWidth <= 767);
 console.log('Is mobile?: ' + isMobile.value);
 
 function updateWindowResize() {
-  isMobile.value = window.innerWidth <= 767;
-  console.log('Is mobile?:' + isMobile.value);
+	isMobile.value = window.innerWidth <= 767;
+	console.log('Is mobile?:' + isMobile.value);
 }
 
 function setupResizeListener() {
@@ -22,23 +22,18 @@ function removeResizeListener() {
 
 onMounted(setupResizeListener);
 onUnmounted(removeResizeListener);
-
-
 </script>
 
 <template>
-  <div>
-    <MenuMobile v-if="isMobile" />
-    <MenuDesktop v-else />
-  </div>
-  <RouterView />
- <nav>
-  <RouterLink to="/">Hem</RouterLink> |
-    <RouterLink to="/sign-in">Logga in</RouterLink>
- </nav>
-  
+	<div>
+		<MenuMobile v-if="isMobile" />
+		<MenuDesktop v-else />
+	</div>
+	<RouterView />
+	<nav>
+		<RouterLink to="/">Hem</RouterLink> |
+		<RouterLink to="/sign-in">Logga in</RouterLink>
+	</nav>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
