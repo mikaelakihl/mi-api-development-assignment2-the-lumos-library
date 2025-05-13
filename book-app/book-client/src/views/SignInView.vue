@@ -39,7 +39,7 @@ async function login() {
 <template>
         <AuthForm
             :title="'Welcome to the Lumos Library'"
-            :submitText="'Logga in'"
+            :submitText="'Log in'"
             :onSubmitHandler="login"
             :errorMessage="error"
             @update:username="username = $event"
@@ -50,7 +50,7 @@ async function login() {
 
             <template #loginWithoutSignInLink>
                 <div class="authview-sign-in-without-login-wrapper">
-                    <a class="authview-form-button">Continue without signing in</a>
+                    <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
                 </div>
             </template>
         </AuthForm>
@@ -68,11 +68,14 @@ async function login() {
         padding: 0.75rem 1.25rem;
         margin-bottom: 1rem;
         margin-top: 1rem;
+        text-decoration: none;
+        font-family: $font-title;
 }
 
 .authview-sign-in-without-login-wrapper{
     text-align: center;
     width: 100%&;
+    margin-bottom: 1rem;
 }
 
 </style>
