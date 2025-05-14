@@ -37,8 +37,8 @@ function goHome() {
 		flex-direction: column;
 		justify-content: space-between;
 		background-color: $color-primary;
-		min-width: 20%;
-		max-width: 20%;
+		min-width: 15%;
+		max-width: 16%;
 		h2 {
             margin: 1rem;
 			font-family: $font-logo;
