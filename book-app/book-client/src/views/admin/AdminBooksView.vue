@@ -63,9 +63,5 @@ import AdminTable from '@/components/admin/AdminTable.vue';
             background-color: $color-secondary;
         }
 	}
-	.table-container {
-		// grid-column: 4 / span 7;
-		flex-basis: 100%;
-	}
 }
 </style>
