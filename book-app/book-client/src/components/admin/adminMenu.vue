@@ -16,24 +16,24 @@ function goHome() {
 		<h2 @click="goHome">The<br />lumos<br />library</h2>
 		<nav>
 			<menu>
-				<RouterLink to="/admin-users" class="menu-links" :class="{ active: currentPage === '/admin-users' }"
-					>Users</RouterLink
-				>
-				<RouterLink to="/admin-books" class="menu-links" :class="{ active: currentPage === '/admin-books' }"
-					>Books</RouterLink
-				>
+				<RouterLink to="/admin-users" class="menu-links" :class="{ active: currentPage === '/admin-users' }">Users</RouterLink>
+				<RouterLink to="/admin-books" class="menu-links" :class="{ active: currentPage === '/admin-books' }">Books</RouterLink>
 			</menu>
 		</nav>
-		<div class="user-info-container">
-			<img
+		<div class="user-container">
+			<!-- TODO: Fixa så att den faktiskt loggar ut... -->
+			<button class="sign-out-btn">Sign out <span class="material-symbols-outlined">logout</span></button>
+			<div class="user-info-container">
+				<img
 				class="profile-picture"
 				src="@/assets/images/heroimg-fantasy-book.jpg"
 				width="45"
 				height="45"
 				loading="lazy"
-			/>
-			<span class="username">Username</span>
-		</div>
+				/>
+				<span class="username">Username</span>
+			</div>
+		 </div>
 	</section>
 </template>
 
@@ -88,12 +88,34 @@ menu {
 		color: $color-secondary;
 	}
 }
+.sign-out-btn {
+	border: none;
+	color: $color-white;
+	background-color: $color-red;
+	margin-inline: 2rem;
+	padding: 1rem 2rem;
+	display: inline-flex;
+	align-items: center;
+	justify-content: flex-start;
+	transition: 0.3s ease-in-out;
+	border-radius: 8px;
+	font-family: $font-paragraph;
+	cursor: pointer;
+	span {
+		margin-left: 0.5rem
+	}
+}
+.sign-out-btn:hover {
+	background-color: #334b4c;
+}
 .user-info-container {
 	padding: 1rem 2rem 1rem 2rem;
+	border-radius: 8px;
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
+	margin-bottom: 1rem;
 	.profile-picture {
 		border-radius: 50%;
 	}
