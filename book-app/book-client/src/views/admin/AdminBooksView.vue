@@ -1,7 +1,6 @@
 <script setup>
 import AdminMenu from '@/components/admin/AdminMenu.vue';
 import AdminTable from '@/components/admin/AdminTable.vue';
-import { RouterLink } from 'vue-router';
 
 </script>
 
