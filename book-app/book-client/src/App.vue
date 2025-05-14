@@ -3,6 +3,7 @@ import { RouterView } from 'vue-router';
 import MenuDesktop from './fixtures/MenuDesktop.vue';
 import MenuMobile from './fixtures/MenuMobile.vue';
 import { onMounted, onUnmounted, ref } from 'vue';
+import FooterComp from './components/FooterComp.vue';
 
 const isMobile = ref(window.innerWidth <= 767);
 console.log('Is mobile?: ' + isMobile.value);
@@ -36,7 +37,9 @@ onUnmounted(removeResizeListener);
   <RouterLink to="/">Hem</RouterLink> |
     <RouterLink to="/sign-in">Logga in</RouterLink>
  </nav>
-  
+  <footer>
+    <FooterComp/>
+  </footer>
 </template>
 
 <style scoped>
