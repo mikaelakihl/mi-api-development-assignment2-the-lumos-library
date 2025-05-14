@@ -498,9 +498,6 @@ main {
         h1{
           font-size: $h-medium-mobile ; 
         }
-        span{
-          
-        }
         p{
           font-weight: 400;
         }
