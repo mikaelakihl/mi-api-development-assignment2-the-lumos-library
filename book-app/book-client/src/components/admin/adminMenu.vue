@@ -92,6 +92,7 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: $color-primary;
+	z-index: 5;
     .logo-title {
         font-family: $font-logo;
         font-size: $h-small;

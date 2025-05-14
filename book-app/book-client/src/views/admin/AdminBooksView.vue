@@ -54,6 +54,7 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 			transition: 0.3s ease-in-out;
 			border-radius: 8px;
 			font-family: $font-paragraph;
+			z-index: 0;
 			cursor: pointer;
 			span {
 				margin-right: 0.5rem;
