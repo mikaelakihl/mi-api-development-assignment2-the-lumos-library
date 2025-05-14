@@ -8,7 +8,7 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 	<div class="admin-container">
         <AdminMenu />
 		<section class="admin-content">
-			<h2>Books</h2>
+			<h2>Users</h2>
             <div class="table-container">
                 <AdminTable 
                     dbTableName="users"
