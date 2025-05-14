@@ -37,7 +37,10 @@ async function login() {
 </script>
 
 <template>
+      
         <AuthView
+
+
             :title="'Welcome to The Lumos Library'"
             :submitText="'Log in'"
             :onSubmitHandler="login"
@@ -45,6 +48,14 @@ async function login() {
             @update:username="username = $event"
             @update:password="password = $event"
         >
+
+            <template #goBackLink>
+                <RouterLink to="/home" class="authview-go-back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
+                    <span>Back</span>
+                </RouterLink>
+            </template>
+
             <button class="authview-form-button" type="button" @click="router.push('/register')">Register</button>
             
 
@@ -81,6 +92,27 @@ async function login() {
     margin-bottom: 1rem;
     font-size: $h-small-mobile;
     margin-top: 1rem;
+}
+
+.authview-go-back-link {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    text-decoration: none;
+    color: $color-black;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 700px) {
+
+.authview-go-back-link{
+    margin-top: 0;
+    margin-bottom: 4rem;
+}
+
+
 }
 
 @media (min-width: 1200px) {
