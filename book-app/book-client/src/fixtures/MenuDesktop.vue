@@ -58,7 +58,7 @@ onUnmounted(removeScrollListener);
 <style lang="scss" scoped>
 header {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 10dvh;
     display: flex;
     justify-content: space-between;
