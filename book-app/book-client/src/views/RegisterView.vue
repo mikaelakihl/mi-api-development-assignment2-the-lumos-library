@@ -53,14 +53,6 @@ async function login() {
                     <span>Back</span>
                 </RouterLink>
         </template>
-            <!-- <button class="authview-form-button" type="button" @click="router.push('/register')">Register</button> -->
-            
-
-            <!-- <template #loginWithoutSignInLink>
-                <div class="authview-sign-in-without-login-wrapper">
-                    <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
-                </div>
-            </template> -->
         </AuthView>
 </template>
 
