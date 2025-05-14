@@ -69,4 +69,29 @@ onMounted(fetchData);
 	</table>
 </template>
 
-<style lang="scss"></style>
+<style lang="scss">
+table {
+	width: 100%;
+	border-collapse: collapse;
+	border-top: 5px solid #f0ecde;
+}
+thead {
+	text-align: left;
+}
+th {
+	font-family: $font-paragraph;
+	font-size: $h-small-mobile;
+	padding: 1rem 2rem;
+}
+tbody {
+    tr {
+        border-bottom: 0.5rem solid $color-background;
+        background-color: #f0ecde;
+        td {
+            padding: 1.5rem 2rem;
+            font-family: $font-paragraph;
+            font-size: 1rem;
+        }
+    }
+}
+</style>
