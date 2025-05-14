@@ -9,9 +9,12 @@ const props = defineProps({
 	dbTableName: String,
 });
 
-const tableHeaders = computed(() =>
-    [props.tableHeaderOne, props.tableHeaderTwo, props.tableHeaderThree, props.tableHeaderFour]
-);
+const tableHeaders = computed(() => [
+	props.tableHeaderOne,
+	props.tableHeaderTwo,
+	props.tableHeaderThree,
+	props.tableHeaderFour,
+]);
 
 const API_URL = import.meta.env.VITE_API_URL;
 const fetchedData = ref([]);
@@ -22,7 +25,7 @@ const fetchData = async () => {
 			throw new Error('Missing dbTableName prop.');
 		}
 		const URL = `${API_URL}${props.dbTableName}`;
-        console.log('URL: ' +  URL.value);
+		console.log('URL: ' + URL.value);
 		const response = await fetch(URL);
 
 		if (!response.ok) {
@@ -37,11 +40,11 @@ const fetchData = async () => {
 };
 
 function capitalizeHeader(header) {
-    if(!header) {
-        return '';
-    }
-    const newHeader = header.charAt(0).toUpperCase() + header.slice(1);
-    return newHeader;
+	if (!header) {
+		return '';
+	}
+	const newHeader = header.charAt(0).toUpperCase() + header.slice(1);
+	return newHeader;
 }
 
 onMounted(fetchData);
