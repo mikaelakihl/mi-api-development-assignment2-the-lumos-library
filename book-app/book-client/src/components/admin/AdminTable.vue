@@ -74,6 +74,7 @@ table {
 	width: 100%;
 	border-collapse: collapse;
 	border-top: 5px solid #f0ecde;
+    margin-bottom: 2rem;
 }
 thead {
 	text-align: left;
