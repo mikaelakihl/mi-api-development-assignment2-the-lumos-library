@@ -42,10 +42,6 @@ onUnmounted(removeResizeListener);
 		<MenuDesktop v-else />
 	</div>
 	<RouterView />
-	<nav>
-		<RouterLink to="/">Hem</RouterLink> |
-		<RouterLink to="/sign-in">Logga in</RouterLink>
-	</nav>
 </template>
 
 <style scoped></style>
