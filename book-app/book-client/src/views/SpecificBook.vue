@@ -63,7 +63,7 @@ onMounted(fetchBook);
     <div class="back-btn-box">
       <router-link class="button-back" to="/">
           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-          <p class="back-btn">Back</p>
+          <p class="back-text">Back</p>
       </router-link>
     </div>
     <div class="book-section">
@@ -137,34 +137,42 @@ onMounted(fetchBook);
           filter: blur(4px);
       }
     }
-    .back-btn-box{
+    .back-btn-box {
       width: 120px;
       height: 40px;
       margin-left: 40px;
-        .button-back{
-          display: flex;
-          justify-content: end;
-          align-items: center;
-          text-decoration: none;
-            svg{
-              width: 50px;
-              height: 40px;
-              transform: scale(0.7);
-              transition: 0.5s ease-in-out;
-            }
-            .back-btn{
-              text-align: center; 
-              border: none;
-              font-size: 1.5rem;
-              cursor: pointer;
-              height: 100%;
-            }
-            &:hover{
-              svg{
-                margin-right: 20px;
-              }
-            }
+
+      .button-back {
+        display: flex;
+        align-items: center;
+        
+        text-decoration: none;
+
+        svg {
+          width: 50px;
+          height: 40px;
+          transform: scale(0.7) translateX(0);
+          transition: transform 0.5s ease-in-out;
         }
+
+        .back-text {
+          text-align: center;
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+          height: 100%;
+          width: 60px;
+        }
+
+        &:hover {
+          svg {
+            transform: scale(0.7) translateX(-20px);  
+          }
+          .back-text{
+            font-weight: bolder;
+          }
+        }
+      }
     }
 
     .book-section{
