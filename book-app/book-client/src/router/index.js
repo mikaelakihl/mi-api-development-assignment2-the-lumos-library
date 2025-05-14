@@ -32,17 +32,17 @@ const router = createRouter({
     },
     {
       path: '/admin',
-      name: 'admin-dashboard',
+      name: 'admin',
       component: AdminView,
     },
     {
       path: '/admin-users',
-      name: 'admin-dashboard',
+      name: 'admin-users',
       component: AdminUsersView,
     },
     {
       path: '/admin-books',
-      name: 'admin-dashboard',
+      name: 'admin-books',
       component: AdminBooksView,
     }
   ],
