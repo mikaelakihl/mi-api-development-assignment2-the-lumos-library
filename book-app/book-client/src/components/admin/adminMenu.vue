@@ -61,7 +61,7 @@ function goHome() {
         flex-direction: column;
 		.menu-links {
 			color: $color-white;
-			font-family: $font-paragraph;
+			font-family: $font-title;
 			font-size: 1.5rem;
 			padding: 1rem 0 1rem 2rem;
 			margin-inline: 1rem;
