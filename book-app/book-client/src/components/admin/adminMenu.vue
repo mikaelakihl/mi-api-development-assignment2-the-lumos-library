@@ -18,9 +18,9 @@ console.log('Current page is: ' + currentPage.value);
 					<RouterLink to="/admin-books" class="menu-links" :class="{active: currentPage === '/admin-books'}">Books</RouterLink>
 				</menu>
 			</nav>
-			<div>
-				<img src="#" />
-				<span>Username</span>
+			<div class="user-info-container">
+				<img class="profile-picture" src="@/assets/images/heroimg-fantasy-book.jpg" width="45" height="45" loading="lazy"/>
+				<span class="username">Username</span>
 			</div>
 		</section>
 </template>
@@ -61,14 +61,29 @@ console.log('Current page is: ' + currentPage.value);
 			margin-inline: 1rem;
 			text-decoration: none;
             // width: 100%;
+			border-radius: 8px;
 		}
 		.menu-links:hover {
 			background-color: #101c1d;
-			border-radius: 8px;
 			cursor: pointer;
 		}
 		.menu-links.active{
 			background-color: #334b4c;
+		}
+	}
+	.user-info-container {
+		padding: 1rem 2rem 1rem 2rem;
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 1rem;
+		.profile-picture {
+			border-radius: 50%;
+		}
+		.username {
+			color: $color-white;
+			font-family: $font-paragraph;
+			font-size: $h-small-mobile;
 		}
 	}
 </style>
