@@ -22,7 +22,7 @@ function goHome() {
 		</nav>
 		<div class="user-container">
 			<!-- TODO: Fixa så att den faktiskt loggar ut... -->
-			<button class="sign-out-btn">Sign out <span class="material-symbols-outlined">logout</span></button>
+			<button class="sign-out-btn"><span class="material-symbols-outlined">logout</span>Sign out</button>
 			<div class="user-info-container">
 				<img
 				class="profile-picture"
@@ -102,7 +102,7 @@ menu {
 	font-family: $font-paragraph;
 	cursor: pointer;
 	span {
-		margin-left: 0.5rem
+		margin-right: 0.5rem
 	}
 }
 .sign-out-btn:hover {
