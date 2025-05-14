@@ -3,6 +3,37 @@ import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 import AuthView from '../components/AuthView.vue'
 
+const username = ref('');
+const password = ref('');
+const router = useRouter()
+const error = ref('');
+
+async function login() {
+    try {
+        const response = await fetch ('http://localhost:3000/auth/register', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                username: username.value,
+                password: password.value
+            })
+        })
+
+        const data = await response.json()
+
+        if (!response.ok) {
+            throw new Error(data.error || 'Something went wrong')
+        }
+
+        // localStorage.setItem('token', data.token)
+        router.push('/home')
+    } catch (error) {
+        error.value = error.message
+    }
+}
+
 
 </script>
 
