@@ -1,17 +1,20 @@
 <script setup>
+import router from '@/router';
 import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
 const currentPage = computed(() => route.path);
 
-console.log('Current page is: ' + currentPage.value);
+function goHome() {
+	router.push('/');
+}
 
 </script>
 
 <template>
     <section class="admin-menu">
-			<h2>The<br />lumos<br />library</h2>
+			<h2 @click="goHome">The<br />lumos<br />library</h2>
 			<nav>
 				<menu>
 					<RouterLink to="/admin-users" class="menu-links" :class="{active: currentPage === '/admin-users'}">Users</RouterLink>
@@ -45,6 +48,9 @@ console.log('Current page is: ' + currentPage.value);
 			overflow-wrap: break-word;
 			white-space: normal;
 			word-wrap: break-word;
+		}
+		h2:hover {
+			cursor: pointer;
 		}
 	}
 	menu {
