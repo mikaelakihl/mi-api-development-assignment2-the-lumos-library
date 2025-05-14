@@ -43,7 +43,7 @@ export const createReview = async (req: Request, res: Response) => {
 
         const savedReview = await review.save();
 
-        // Step 2: Add the review ID to the book's reviews array
+       
         await Book.findByIdAndUpdate(
             bookId,
             { $push: { reviews: savedReview._id } },
@@ -96,12 +96,3 @@ export const deleteReview = async (req: Request, res: Response) => {
     }
 }
 
-export const getReviewsForBook = async (req: Request, res: Response) => {
-    try {
-        const reviews = await Review.find({ book: req.params.bookId });
-        res.status(200).json(reviews);
-    } catch (error:unknown) {
-        const message = error instanceof Error ? error.message: 'unknown error'
-        res.status(500).json({ error: message });
-    }
-};

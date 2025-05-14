@@ -31,10 +31,7 @@
     <img src="../assets/images/heroimg-fantasy-book.jpg" class="authview-hero-img">
     <div class="authview-hero-content">
         <div class="authview-hero-wrapper">
-            <RouterLink to="/home" class="authview-go-back-link">
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
-                <span>Back</span>
-            </RouterLink>
+            <slot name="goBackLink"/>
             <h2> {{ title }}</h2>
             <form class="authview-form-container" @submit.prevent="onSubmit">
                     <label class="authview-form-label">Username:</label>
@@ -133,15 +130,15 @@ h2{
         font-size: $h-small-mobile;
 }
 
-.authview-go-back-link {
-    text-align: left;
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    margin-left: 1rem;
-    text-decoration: none;
-    color: $color-black;
-}
+// .authview-go-back-link {
+//     text-align: left;
+//     display: flex;
+//     align-items: center;
+//     margin-top: 1rem;
+//     margin-left: 1rem;
+//     text-decoration: none;
+//     color: $color-black;
+// }
 
 .authview-form-button-container{
     display: flex;
