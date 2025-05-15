@@ -2,37 +2,19 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 import AuthView from '../components/AuthView.vue'
+import useAuthStore from '@/stores/useAuthStore';
 
 const username = ref('');
 const password = ref('');
 const router = useRouter()
 const error = ref('');
 
-async function login() {
-    try {
-        const response = await fetch ('http://localhost:3000/auth/login', {
-            method: 'POST',
-            credentials: "include",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: username.value,
-                password: password.value
-            })
-        })
+const useAuth = useAuthStore();
 
-        const data = await response.json()
+function handleLogin() {
+    useAuth.login(username.value, password.value);
 
-        if (!response.ok) {
-            throw new Error(data.error || 'Something went wrong')
-        }
-
-     //   localStorage.setItem('token', data.token)
-        router.push('/admin')
-    } catch (error) {
-        error.value = error.message
-    }
+    router.push('/admin')
 }
 
 </script>
@@ -44,7 +26,7 @@ async function login() {
 
             :title="'Welcome to The Lumos Library'"
             :submitText="'Log in'"
-            :onSubmitHandler="login"
+            :onSubmitHandler="handleLogin"
             :errorMessage="error"
             @update:username="username = $event"
             @update:password="password = $event"
