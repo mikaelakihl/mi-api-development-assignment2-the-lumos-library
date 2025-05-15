@@ -151,7 +151,7 @@ main {
   padding-right: 40px;
   padding-left: 40px;
   background-color: $color-background;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   .top-image {
     width: 100%;
