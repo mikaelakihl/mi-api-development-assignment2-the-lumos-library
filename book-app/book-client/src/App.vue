@@ -45,4 +45,9 @@ onUnmounted(removeResizeListener);
 	<RouterView />
 </template>
 
-<style scoped></style>
+<style >
+html, body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+</style>
