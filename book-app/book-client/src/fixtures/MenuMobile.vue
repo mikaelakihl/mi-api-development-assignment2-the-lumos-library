@@ -22,8 +22,8 @@ function toggleMenu() {
 
 		<nav class="mobile-menu" :class="{ open: isOpen }">
             <RouterLink to="/" @click="toggleMenu">Home</RouterLink>
-            <RouterLink to="" @click="toggleMenu">Admin</RouterLink>
-            <RouterLink to="" @click="toggleMenu">Sign in</RouterLink>
+            <RouterLink to="/admin" @click="toggleMenu">Admin</RouterLink>
+            <RouterLink to="/sign-in" @click="toggleMenu">Sign in</RouterLink>
 		</nav>
 	</header>
 </template>

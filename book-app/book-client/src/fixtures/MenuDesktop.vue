@@ -49,8 +49,8 @@ onUnmounted(removeScrollListener);
         
         <nav class="mobile-menu">
             <RouterLink :class="{'scrolled': isScrolled}" to="/">Home</RouterLink>
-            <RouterLink :class="{'scrolled': isScrolled}" to="">Admin</RouterLink>
-            <RouterLink :class="{'scrolled': isScrolled}" to="">Sign in</RouterLink>
+            <RouterLink :class="{'scrolled': isScrolled}" to="/admin">Admin</RouterLink>
+            <RouterLink :class="{'scrolled': isScrolled}" to="/sign-in">Sign in</RouterLink>
 		</nav>
     </header>
 </template>
