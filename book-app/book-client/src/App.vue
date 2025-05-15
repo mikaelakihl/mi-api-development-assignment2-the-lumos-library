@@ -17,11 +17,10 @@ const isAdminPage = computed(checkIfAdminPage);
 // -----------------------------------------------------------
 
 const isMobile = ref(window.innerWidth <= 767);
-console.log('Is mobile?: ' + isMobile.value);
+
 
 function updateWindowResize() {
-	isMobile.value = window.innerWidth <= 767;
-	console.log('Is mobile?:' + isMobile.value);
+	isMobile.value = window.innerWidth <= 767;	
 }
 
 function setupResizeListener() {
@@ -35,6 +34,8 @@ function removeResizeListener() {
 onMounted(setupResizeListener);
 onUnmounted(removeResizeListener);
 </script>
+
+
 
 <template>
 	<div v-if="!isAdminPage">
