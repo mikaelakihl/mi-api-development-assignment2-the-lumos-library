@@ -28,7 +28,7 @@ async function login() {
         }
 
         // localStorage.setItem('token', data.token)
-        router.push('/home')
+        router.push('/')
     } catch (error) {
         error.value = error.message
     }

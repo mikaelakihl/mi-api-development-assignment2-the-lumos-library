@@ -61,7 +61,7 @@ async function login() {
 
             <template #loginWithoutSignInLink>
                 <div class="authview-sign-in-without-login-wrapper">
-                    <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
+                    <RouterLink to ="/" class="authview-form-button">Continue without signing in</RouterLink>
                 </div>
             </template>
         </AuthView>
