@@ -30,6 +30,7 @@ const useAuthStore = defineStore('auth', {
           is_admin: data.is_admin
         }
         this.error = null
+        console.log('Login successful: ' + this.isAuthenticated);
       } catch (err) {
         this.error = err.message || 'An error occurred during login'
         this.isAuthenticated = false

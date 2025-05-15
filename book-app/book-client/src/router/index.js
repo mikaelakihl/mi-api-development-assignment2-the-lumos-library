@@ -71,6 +71,7 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   const auth = useAuthStore()
 
+  console.log(auth.isAuthenticated);
   // ✅ Don't manually modify store here. Just rely on its current state.
   if (to.meta.requiresAuth && !auth.isAuthenticated) {
     next('/sign-in')
