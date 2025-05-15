@@ -56,22 +56,24 @@ onMounted(fetchBooks);
 					<span class="material-symbols-outlined"> search </span>
 				</button>
 			</form>
-			<div class="book-list" id="book-list" v-for="book in books" :key="book._id">
-				<article>
-					<img :src="book.image" />
-					<div class="book-container">
-						<h3>{{ book.title }}</h3>
-						<p>{{ book.author }}</p>
-						<p>{{ book.published_year }}</p>
-						<li v-for="(genre, i) in book.genres" :key="i">
-							{{ genre }}
-						</li>
-						<RouterLink :to="`/books/${book._id}`"
-							>Read more<span class="material-symbols-outlined"> trending_flat </span></RouterLink
-						>
-					</div>
-					<!-- TODO: Add size and other relevant attributes for image-elements -->
-				</article>
+			<div class="book-list-container">
+				<div class="book" id="book-list" v-for="book in books" :key="book._id">
+					<article>
+						<img :src="book.image" />
+						<div class="book-container">
+							<h3>{{ book.title }}</h3>
+							<p>{{ book.author }}</p>
+							<p>{{ book.published_year }}</p>
+							<li v-for="(genre, i) in book.genres" :key="i">
+								{{ genre }}
+							</li>
+							<RouterLink :to="`/books/${book._id}`"
+								>Read more<span class="material-symbols-outlined"> trending_flat </span></RouterLink
+							>
+						</div>
+						<!-- TODO: Add size and other relevant attributes for image-elements -->
+					</article>
+				</div>
 			</div>
 		</section>
 	</main>
@@ -133,10 +135,11 @@ main {
 			font-size: $h-large;
 			margin-top: 7rem;
 		}
-		form {
+		.search-form {
 			position: relative;
 			margin-bottom: 5rem;
 			margin-top: 5rem;
+			filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
 			input {
 				background-color: $color-secondary;
 				border: none;
@@ -158,6 +161,22 @@ main {
 				right: -1.5rem;
 				top: 50%;
 				transform: translateY(-50%);
+			}
+		}
+		.book-list-container {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			.book:nth-child(odd) {
+				grid-column: 2 / span 5;
+			}
+			.book:nth-child(even) {
+				grid-column: 7 / span 5;
+			}
+		}
+		.book {
+			max-width: 100%;
+			img {
+				max-width: 100%;
 			}
 		}
 	}
