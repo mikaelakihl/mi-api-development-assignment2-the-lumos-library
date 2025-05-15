@@ -7,6 +7,8 @@ import AdminView from '@/views/admin/AdminView.vue'
 import AdminUsersView from '@/views/admin/AdminUsersView.vue'
 import AdminBooksView from '@/views/admin/AdminBooksView.vue'
 import CreateBookView from '@/views/admin/CreateBookView.vue'
+import useAuthStore from '@/stores/useAuthStore'
+
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -50,11 +52,32 @@ const router = createRouter({
       path: '/admin-books-add',
       name: 'admin-books-add',
       component: CreateBookView,
+      meta: {
+        requiresAuth: true
+      }
     }
   ],
 })
 
 
+
+
+
+
+// Helper to read cookies
+
+
+// Guard (called AFTER pinia is already initialized in main.js)
+router.beforeEach((to, from, next) => {
+  const auth = useAuthStore()
+
+  // ✅ Don't manually modify store here. Just rely on its current state.
+  if (to.meta.requiresAuth && !auth.isAuthenticated) {
+    next('/sign-in')
+  } else {
+    next()
+  }
+})
 
 
 export default router
