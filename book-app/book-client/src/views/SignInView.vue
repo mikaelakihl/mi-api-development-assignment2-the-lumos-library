@@ -12,6 +12,7 @@ async function login() {
     try {
         const response = await fetch ('http://localhost:3000/auth/login', {
             method: 'POST',
+            credentials: "include",
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -27,7 +28,7 @@ async function login() {
             throw new Error(data.error || 'Something went wrong')
         }
 
-        localStorage.setItem('token', data.token)
+     //   localStorage.setItem('token', data.token)
         router.push('/admin')
     } catch (error) {
         error.value = error.message
@@ -61,7 +62,7 @@ async function login() {
 
             <template #loginWithoutSignInLink>
                 <div class="authview-sign-in-without-login-wrapper">
-                    <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
+                    <RouterLink to ="/" class="authview-form-button">Continue without signing in</RouterLink>
                 </div>
             </template>
         </AuthView>
