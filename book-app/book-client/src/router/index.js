@@ -6,6 +6,7 @@ import SignInView from '@/views/SignInView.vue'
 import AdminView from '@/views/admin/AdminView.vue'
 import AdminUsersView from '@/views/admin/AdminUsersView.vue'
 import AdminBooksView from '@/views/admin/AdminBooksView.vue'
+import CreateBookView from '@/views/admin/CreateBookView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +45,11 @@ const router = createRouter({
       path: '/admin-books',
       name: 'admin-books',
       component: AdminBooksView,
+    },
+    {
+      path: '/admin-books-add',
+      name: 'admin-books-add',
+      component: CreateBookView,
     }
   ],
 })

@@ -1,6 +1,7 @@
 <script setup>
 import AdminMenu from '@/components/admin/AdminMenu.vue';
 import AdminTable from '@/components/admin/AdminTable.vue';
+import { RouterLink } from 'vue-router';
 </script>
 
 <template>
@@ -8,7 +9,7 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 		<AdminMenu />
 		<section class="admin-content">
 			<h2>Books</h2>
-			<button class="add-new-book-btn"><span class="material-symbols-outlined">add</span>Add new book</button>
+			<RouterLink to="/admin-books-add" class="add-new-book-btn"><span class="material-symbols-outlined">add</span>Add new book</RouterLink>
 			<div class="table-container">
 				<AdminTable
 					dbTableName="books"
@@ -54,6 +55,7 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 			transition: 0.3s ease-in-out;
 			border-radius: 8px;
 			font-family: $font-paragraph;
+			text-decoration: none;
 			z-index: 0;
 			cursor: pointer;
 			span {
