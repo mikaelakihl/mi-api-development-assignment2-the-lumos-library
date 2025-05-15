@@ -25,14 +25,15 @@ import { RouterLink } from 'vue-router';
 
 <style lang="scss" scoped>
 .admin-container {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	display: flex;
+    flex-direction: column;
+    width: 100%;
 	background-color: $color-primary;
 	min-height: 100dvh;
 	.admin-content {
 		grid-column: 3 / span 10;
 		min-height: 90dvh;
-		margin: 1rem;
+		margin: 5rem 1rem 1rem 1rem; 
 		background-color: $color-background;
 		border-radius: 16px;
 		h2 {
@@ -44,8 +45,8 @@ import { RouterLink } from 'vue-router';
 		}
 		.add-new-book-btn {
 			position: absolute;
-			right: 3.5rem;
-			top: 3.5rem;
+			right: 2rem;
+			top: 7.5rem;
 			border: none;
 			color: $color-white;
 			background-color: $color-red;
@@ -67,4 +68,21 @@ import { RouterLink } from 'vue-router';
         }
 	}
 }
+
+@media screen and (min-width: 768px) {
+    .admin-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        .admin-content {
+            // width: auto;
+            grid-column: 3 / span 10;
+            margin: 1rem;
+			.add-new-book-btn {
+				right: 3.5rem;
+				top: 3.5rem;
+			}
+        }
+    }
+}
+
 </style>

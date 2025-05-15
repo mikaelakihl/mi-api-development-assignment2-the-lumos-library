@@ -24,14 +24,15 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 
 <style lang="scss" scoped>
 .admin-container {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	display: flex;
+    flex-direction: column;
+    width: 100%;
     background-color: $color-primary;
     min-height: 100dvh;
 	.admin-content {
 		grid-column: 3 / span 10;
         min-height: 90dvh;
-        margin: 1rem;
+        margin: 5rem 1rem 1rem 1rem; 
         background-color: $color-background;
         border-radius: 16px;
         h2 {
@@ -46,4 +47,17 @@ import AdminTable from '@/components/admin/AdminTable.vue';
         grid-column: 3 / span 10;
     }
 }
+
+@media screen and (min-width: 768px) {
+    .admin-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        .admin-content {
+            // width: auto;
+            grid-column: 3 / span 10;
+            margin: 1rem;
+        }
+    }
+}
+
 </style>
