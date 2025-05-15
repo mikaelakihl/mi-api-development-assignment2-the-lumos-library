@@ -20,8 +20,9 @@ import { RouterLink } from 'vue-router';
 
 <style lang="scss" scoped>
 .admin-container {
-	display: grid;
-	grid-template-columns: repeat(12, 1fr);
+	display: flex;
+    flex-direction: column;
+    width: 100%;
 	background-color: $color-primary;
     min-height: 100dvh;
 	.admin-content {
@@ -31,7 +32,7 @@ import { RouterLink } from 'vue-router';
 		flex-direction: column;
 		justify-content: flex-start;
 		gap: 3rem;
-		margin: 1rem;
+		margin: 5rem 1rem 1rem 1rem; 
 		background-color: $color-background;
 		border-radius: 16px;
 		h2 {
@@ -42,10 +43,10 @@ import { RouterLink } from 'vue-router';
             margin-bottom: 1rem
 		}
 		.dashboard-container {
-			margin-left: 2rem;
 			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
 			flex-wrap: wrap;
 			gap: 2rem;
 			h3 {
@@ -68,5 +69,22 @@ import { RouterLink } from 'vue-router';
 			}
 		}
 	}
+}
+
+@media screen and (min-width: 768px) {
+    .admin-container {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        .admin-content {
+            // width: auto;
+            grid-column: 3 / span 10;
+            margin: 1rem;
+			.dashboard-container {
+				flex-direction: row;
+				justify-content: flex-start;
+				margin-left: 2rem;
+			}
+        }
+    }
 }
 </style>
