@@ -216,7 +216,7 @@ main {
     position: relative;
     right: 100px;
     gap: 100px;
-
+    margin-bottom: 20px;
     .owl {
       position: absolute;
       right: 0;
@@ -652,6 +652,9 @@ main{
     .book-section{
       right: 0;
       height: 550px;
+      .owl{
+        display: none;
+      }
       &-left{
         img{
           object-fit: cover;
