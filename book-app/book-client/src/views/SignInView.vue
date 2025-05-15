@@ -28,7 +28,7 @@ async function login() {
         }
 
         localStorage.setItem('token', data.token)
-        router.push('/')
+        router.push('/admin')
     } catch (error) {
         error.value = error.message
     }
