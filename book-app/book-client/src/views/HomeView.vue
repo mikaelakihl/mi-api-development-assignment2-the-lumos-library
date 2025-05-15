@@ -59,7 +59,7 @@ onMounted(fetchBooks);
 			<div class="book-list-container">
 				<div class="book" id="book-list" v-for="book in books" :key="book._id">
 					<article>
-						<img :src="book.image" width="300" height="450"/>
+						<img :src="book.image" width="300" height="450" />
 						<div class="book-info-container">
 							<h3>{{ book.title }}</h3>
 							<p>{{ book.author }}</p>
@@ -83,240 +83,185 @@ onMounted(fetchBooks);
 
 <style lang="scss">
 main {
-		margin-top: 5rem;
-		overflow: hidden;
-		.hero-section {
-			height: 100dvh;
-			min-width: 100vw;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
-			h1 {
-				margin-left: 5rem;
-				font-family: $font-title;
-				font-size: $h-medium;
-				color: $color-white;
-				z-index: 1;
-			}
-			img {
-				position: absolute;
-				top: 0;
-				align-self: center;
-				min-width: 100vw;
-				max-height: 100dvh;
-				object-fit: cover;
-				filter: blur(4px) brightness(75%);
-				// filter: brightness(80%);
-			}
-			span {
-				z-index: 1;
-				position: absolute;
-				bottom: 5rem;
-				left: 50%;
-				color: $color-white;
-				font-size: $h-medium;
-				cursor: pointer;
-			}
-			span:hover {
-				color: $color-secondary;
-			}
-		}
-	}
-	.book-section {
+	margin-top: 5rem;
+	overflow: hidden;
+	max-width: 100vw;
+	.hero-section {
+		height: 100dvh;
+		min-width: 100vw;
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		h2 {
+		justify-content: center;
+		align-items: flex-start;
+		overflow: hidden;
+		h1 {
+			margin-left: 2rem;
 			font-family: $font-title;
-			font-size: $h-large;
-			margin-top: 7rem;
-		}
-		.search-form {
-			position: relative;
-			margin-bottom: 5rem;
-			margin-top: 5rem;
-			filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
-			input {
-				background-color: $color-secondary;
-				border: none;
-				border-radius: 16px;
-				padding: 0.7rem;
-				min-width: 20vw;
-				color: $color-white;
-			}
-			input::placeholder {
-				color: $color-white;
-				opacity: 70%;
-			}
-			button {
-				width: 3rem;
-				height: 3rem;
-				border: none;
-				border-radius: 50%;
-				position: absolute;
-				right: -1.5rem;
-				top: 50%;
-				transform: translateY(-50%);
-			}
-		}
-		.book-list-container {
-			display: grid;
-			grid-template-columns: repeat(12, 1fr);
-			width: 100vw;
-			.book:nth-child(odd) {
-				grid-column: 2 / span 5;
-			}
-			.book:nth-child(even) {
-				grid-column: 7 / span 5;
-			}
-		}
-	}
-	.book {
-		max-width: 90%;
-		margin-bottom: 5rem;
-		article {
-			position: relative;
-			display: flex;
-			flex-direction: row;
-			justify-content: flex-start;
-		}	
-		img {
-			max-width: 40%;
-			min-width: 40%;
-			scale: 2 / 3;
-			object-fit: cover;
-			// height: auto;
-			// min-width: 15rem;
-			z-index: 1;
-			border-radius: 16px;
-		}
-		.book-info-container {
-			position: absolute;
-			right: 0;
-			top: 1.5rem;
-			background-color: $color-primary;
-			min-width: 65%;
-			max-width: 65%;
-			min-height: 100%;
-			border-radius: 16px;
+			font-size: $h-medium;
 			color: $color-white;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding: 4rem;
-			padding-left: 6rem;
-			h3 {
-				font-family: $font-title;
-				font-size: $h-small;
-				margin-bottom: 2rem;
-			}
-			p {
-				font-family: $font-paragraph;
-				font-size: 1rem;
-				opacity: 80%;
-				margin-bottom: 1rem;
-			}
-			.genres {
-				display: flex;
-				gap: 1rem;
-				font-family: $font-paragraph;
-				font-size: 1rem;
-			}
-			a {
-				color: $color-black;
-				font-family: $font-paragraph;
-				background-color: $color-white;
-				padding: 0.5rem;
-				border-radius: 8px;
-				border: none;
-				display: inline-flex;
-				align-items: center;
-				text-decoration: none;
-				position: absolute;
-				bottom: 3rem;
+			z-index: 1;
+		}
+		img {
+			position: absolute;
+			top: 0;
+			align-self: center;
+			max-width: 100vw;
+			min-height: 100dvh;
+			object-fit: cover;
+			filter: blur(4px) brightness(75%);
+			overflow: hidden;
+		}
+		span {
+			z-index: 1;
+			position: absolute;
+			bottom: 5rem;
+			left: 50%;
+			color: $color-white;
+			font-size: $h-medium;
+			cursor: pointer;
+		}
+		span:hover {
+			color: $color-secondary;
+		}
+	}
+}
+.book-section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	h2 {
+		font-family: $font-title;
+		font-size: $h-large;
+		margin-top: 7rem;
+	}
+	.search-form {
+		position: relative;
+		margin-bottom: 5rem;
+		margin-top: 5rem;
+		filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
+		input {
+			background-color: $color-secondary;
+			border: none;
+			border-radius: 16px;
+			padding: 0.7rem;
+			min-width: 50vw;
+			color: $color-white;
+		}
+		input::placeholder {
+			color: $color-white;
+			opacity: 70%;
+		}
+		button {
+			width: 3rem;
+			height: 3rem;
+			border: none;
+			border-radius: 50%;
+			position: absolute;
+			right: -1.5rem;
+			top: 50%;
+			transform: translateY(-50%);
+			transition: 0.3s ease-in-out;
+		}
+		button:hover {
+			background-color: $color-primary;
+			span {
+				color: $color-white;
+				transition: 0.3s ease-in-out;
 			}
 		}
 	}
+	.book-list-container {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+}
+.book {
+	margin-inline: 1rem;
+	article {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+	}
+	img {
+		// max-width: 30%;
+		// min-width: 30%;
+		max-width: 30%;
+		// height: auto;
 
-@media screen and (min-width: 768px) {
+		scale: 2 / 3;
+		object-fit: cover;
+		// height: auto;
+		// min-width: 15rem;
+		z-index: 1;
+		border-radius: 16px;
+	}
+	.book-info-container {
+		position: relative;
+		right: -25%;
+		top: -12rem;
+		background-color: $color-primary;
+		min-width: 65%;
+		max-width: 65%;
+		min-height: 100%;
+		border-radius: 16px;
+		color: $color-white;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 4rem;
+		h3 {
+			font-family: $font-title;
+			font-size: $h-small;
+			margin-bottom: 2rem;
+		}
+		p {
+			font-family: $font-paragraph;
+			font-size: 1rem;
+			opacity: 80%;
+			margin-bottom: 1rem;
+		}
+		.genres {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 1rem;
+			font-family: $font-paragraph;
+			font-size: 1rem;
+		}
+		a {
+			color: $color-black;
+			font-family: $font-paragraph;
+			background-color: $color-white;
+			padding: 0.5rem;
+			border-radius: 8px;
+			border: none;
+			display: inline-flex;
+			align-items: center;
+			text-decoration: none;
+			margin-top: 2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 1300px) {
 	main {
 		margin-top: 0;
-		overflow: hidden;
 		.hero-section {
-			height: 100dvh;
-			min-width: 100vw;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: flex-start;
 			h1 {
 				margin-left: 10rem;
-				font-family: $font-title;
-				font-size: $h-medium;
-				color: $color-white;
-				z-index: 1;
 			}
 			img {
-				// box-shadow: inset 83em 53em 1350px rgb(0, 0, 0);
-				position: absolute;
-				top: 0;
-				align-self: center;
 				min-width: 100vw;
 				max-height: 100dvh;
-				object-fit: cover;
-				filter: blur(4px) brightness(75%);
-				// filter: brightness(80%);
-			}
-			span {
-				z-index: 1;
-				position: absolute;
-				bottom: 5rem;
-				left: 50%;
-				color: $color-white;
-				font-size: $h-medium;
-				cursor: pointer;
-			}
-			span:hover {
-				color: $color-secondary;
 			}
 		}
 	}
 	.book-section {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		h2 {
-			font-family: $font-title;
-			font-size: $h-large;
-			margin-top: 7rem;
-		}
 		.search-form {
-			position: relative;
-			margin-bottom: 5rem;
-			margin-top: 5rem;
-			filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
 			input {
-				background-color: $color-secondary;
-				border: none;
-				border-radius: 16px;
-				padding: 0.7rem;
 				min-width: 20vw;
-				color: $color-white;
-			}
-			input::placeholder {
-				color: $color-white;
-				opacity: 70%;
-			}
-			button {
-				width: 3rem;
-				height: 3rem;
-				border: none;
-				border-radius: 50%;
-				position: absolute;
-				right: -1.5rem;
-				top: 50%;
-				transform: translateY(-50%);
 			}
 		}
 		.book-list-container {
@@ -333,65 +278,23 @@ main {
 	}
 	.book {
 		max-width: 90%;
-		margin-bottom: 5rem;
+		margin-bottom: 9rem;
 		article {
-			position: relative;
-			display: flex;
 			flex-direction: row;
-			justify-content: flex-start;
-		}	
+		}
 		img {
 			max-width: 40%;
 			min-width: 40%;
-			scale: 2 / 3;
-			object-fit: cover;
-			// height: auto;
-			// min-width: 15rem;
-			z-index: 1;
-			border-radius: 16px;
 		}
 		.book-info-container {
 			position: absolute;
 			right: 0;
 			top: 1.5rem;
-			background-color: $color-primary;
 			min-width: 65%;
 			max-width: 65%;
 			min-height: 100%;
-			border-radius: 16px;
-			color: $color-white;
-			display: flex;
-			flex-direction: column;
-			align-items: flex-start;
-			padding: 4rem;
 			padding-left: 6rem;
-			h3 {
-				font-family: $font-title;
-				font-size: $h-small;
-				margin-bottom: 2rem;
-			}
-			p {
-				font-family: $font-paragraph;
-				font-size: 1rem;
-				opacity: 80%;
-				margin-bottom: 1rem;
-			}
-			.genres {
-				display: flex;
-				gap: 1rem;
-				font-family: $font-paragraph;
-				font-size: 1rem;
-			}
 			a {
-				color: $color-black;
-				font-family: $font-paragraph;
-				background-color: $color-white;
-				padding: 0.5rem;
-				border-radius: 8px;
-				border: none;
-				display: inline-flex;
-				align-items: center;
-				text-decoration: none;
 				position: absolute;
 				bottom: 3rem;
 			}
