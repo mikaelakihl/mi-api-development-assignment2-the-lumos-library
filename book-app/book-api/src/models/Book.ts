@@ -29,6 +29,10 @@ const BookSchema = new Schema<IBook>({
         type: Number,
         required: true
     },
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
     reviews: [{type: Schema.Types.ObjectId, ref: 'Reviews'}]
 })
 
