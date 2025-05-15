@@ -42,11 +42,17 @@ const router = createRouter({
       path: '/admin-users',
       name: 'admin-users',
       component: AdminUsersView,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/admin-books',
       name: 'admin-books',
       component: AdminBooksView,
+      meta: {
+        requiresAuth: true
+      }
     },
     {
       path: '/admin-books-add',
@@ -59,20 +65,11 @@ const router = createRouter({
   ],
 })
 
-
-
-
-
-
-// Helper to read cookies
-
-
-// Guard (called AFTER pinia is already initialized in main.js)
 router.beforeEach((to, from, next) => {
   const auth = useAuthStore()
 
   console.log(auth.isAuthenticated);
-  // ✅ Don't manually modify store here. Just rely on its current state.
+
   if (to.meta.requiresAuth && !auth.isAuthenticated) {
     next('/sign-in')
   } else {
