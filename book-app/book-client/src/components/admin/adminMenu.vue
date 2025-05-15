@@ -65,7 +65,10 @@ onUnmounted(removeResizeListener);
 		</nav>
 		<div class="user-container">
 			<!-- TODO: Fixa så att den faktiskt loggar ut... -->
-			<button class="sign-out-btn"><span class="material-symbols-outlined">logout</span>Sign out</button>
+			
+			<router-link to="/">
+				<button class="sign-out-btn"><span class="material-symbols-outlined">logout</span>Sign out</button>
+			</router-link>
 			<div class="user-info-container">
 				<img
 					class="profile-picture"
