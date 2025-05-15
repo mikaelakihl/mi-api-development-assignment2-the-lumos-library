@@ -85,10 +85,11 @@ onMounted(fetchBooks);
 main {
 	margin-top: 5rem;
 	overflow: hidden;
-	max-width: 100vw;
+	max-width: 100100%;
 	.hero-section {
 		height: 100dvh;
 		min-width: 100vw;
+		max-width: 100%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -96,6 +97,7 @@ main {
 		overflow: hidden;
 		h1 {
 			margin-left: 2rem;
+			margin-right: 2rem;
 			font-family: $font-title;
 			font-size: $h-medium;
 			color: $color-white;
@@ -189,7 +191,7 @@ main {
 		// max-width: 30%;
 		// min-width: 30%;
 		max-width: 30%;
-		// height: auto;
+		height: auto;
 
 		scale: 2 / 3;
 		object-fit: cover;
@@ -203,15 +205,16 @@ main {
 		right: -25%;
 		top: -12rem;
 		background-color: $color-primary;
-		min-width: 65%;
-		max-width: 65%;
+		min-width: 70%;
+		max-width: 70%;
 		min-height: 100%;
 		border-radius: 16px;
 		color: $color-white;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
-		padding: 4rem;
+		padding: 2rem;
+		padding-left: 2.5rem;
 		h3 {
 			font-family: $font-title;
 			font-size: $h-small;
@@ -241,6 +244,15 @@ main {
 			align-items: center;
 			text-decoration: none;
 			margin-top: 2rem;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.book {
+		margin-inline: 10%;
+		.book-info-container{
+			padding-left: 4rem;
 		}
 	}
 }
@@ -285,6 +297,7 @@ main {
 		img {
 			max-width: 40%;
 			min-width: 40%;
+			height: 450px;
 		}
 		.book-info-container {
 			position: absolute;
@@ -293,6 +306,7 @@ main {
 			min-width: 65%;
 			max-width: 65%;
 			min-height: 100%;
+			padding: 4rem;
 			padding-left: 6rem;
 			a {
 				position: absolute;
