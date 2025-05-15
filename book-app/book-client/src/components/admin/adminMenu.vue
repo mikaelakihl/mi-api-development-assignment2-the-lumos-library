@@ -2,6 +2,7 @@
 import router from '@/router';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 import { useRoute } from 'vue-router';
+import useAuthStore from '@/stores/useAuthStore';
 
 const route = useRoute();
 const currentPage = computed(() => route.path);
@@ -37,6 +38,13 @@ function removeResizeListener() {
 
 onMounted(setupResizeListener);
 onUnmounted(removeResizeListener);
+
+const useAuth = useAuthStore();
+async function handleLogout() {
+  await useAuth.logout()
+  router.push('/') 
+}
+
 </script>
 
 <template>
@@ -67,7 +75,7 @@ onUnmounted(removeResizeListener);
 			<!-- TODO: Fixa så att den faktiskt loggar ut... -->
 			
 			<router-link to="/">
-				<button class="sign-out-btn"><span class="material-symbols-outlined">logout</span>Sign out</button>
+				<button class="sign-out-btn"><span class="material-symbols-outlined"  @click="handleLogout">logout</span>Sign out</button>
 			</router-link>
 			<div class="user-info-container">
 				<img
