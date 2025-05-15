@@ -37,6 +37,7 @@ onUnmounted(removeResizeListener);
 </script>
 
 <template>
+ 29-create-admin-panel-table-for-books
 	<div v-if="!isAdminPage">
 		<MenuMobile v-if="isMobile" />
 		<MenuDesktop v-else />
