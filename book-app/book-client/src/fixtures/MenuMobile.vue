@@ -22,8 +22,8 @@ function toggleMenu() {
 
 		<nav class="mobile-menu" :class="{ open: isOpen }">
             <RouterLink to="/" @click="toggleMenu">Home</RouterLink>
-            <RouterLink to="" @click="toggleMenu">Admin</RouterLink>
-            <RouterLink to="" @click="toggleMenu">Sign in</RouterLink>
+            <RouterLink to="/admin" @click="toggleMenu">Admin</RouterLink>
+            <RouterLink to="/sign-in" @click="toggleMenu">Sign in</RouterLink>
 		</nav>
 	</header>
 </template>
@@ -40,6 +40,7 @@ header {
     align-items: center;
     padding: 1rem;
     background-color: $color-primary;
+    z-index: 3;
     .logo-title {
         font-family: $font-logo;
         font-size: $h-small;

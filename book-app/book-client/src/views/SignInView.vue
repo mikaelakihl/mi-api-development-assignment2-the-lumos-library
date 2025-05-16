@@ -2,36 +2,19 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router';
 import AuthView from '../components/AuthView.vue'
+import useAuthStore from '@/stores/useAuthStore';
 
 const username = ref('');
 const password = ref('');
 const router = useRouter()
 const error = ref('');
 
-async function login() {
-    try {
-        const response = await fetch ('http://localhost:3000/auth/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: username.value,
-                password: password.value
-            })
-        })
+const useAuth = useAuthStore();
 
-        const data = await response.json()
+function handleLogin() {
+    useAuth.login(username.value, password.value);
 
-        if (!response.ok) {
-            throw new Error(data.error || 'Something went wrong')
-        }
-
-        localStorage.setItem('token', data.token)
-        router.push('/home')
-    } catch (error) {
-        error.value = error.message
-    }
+    router.push('/admin')
 }
 
 </script>
@@ -43,14 +26,14 @@ async function login() {
 
             :title="'Welcome to The Lumos Library'"
             :submitText="'Log in'"
-            :onSubmitHandler="login"
+            :onSubmitHandler="handleLogin"
             :errorMessage="error"
             @update:username="username = $event"
             @update:password="password = $event"
         >
 
             <template #goBackLink>
-                <RouterLink to="/home" class="authview-go-back-link">
+                <RouterLink to="/" class="authview-go-back-link">
                     <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>
                     <span>Back</span>
                 </RouterLink>
@@ -61,7 +44,7 @@ async function login() {
 
             <template #loginWithoutSignInLink>
                 <div class="authview-sign-in-without-login-wrapper">
-                    <RouterLink to ="/home" class="authview-form-button">Continue without signing in</RouterLink>
+                    <RouterLink to ="/" class="authview-form-button">Continue without signing in</RouterLink>
                 </div>
             </template>
         </AuthView>

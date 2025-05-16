@@ -26,7 +26,7 @@ export const loginUser = async (req: Request, res: Response) => {
             res.status(401).json({ message: 'Password is incorrect' });
             return;
         }
-  
+    
       const accessToken = jwt.sign(
         { username },
         process.env.JWT_SECRET || "",
@@ -36,7 +36,7 @@ export const loginUser = async (req: Request, res: Response) => {
       res.cookie('accessToken', accessToken, {
         httpOnly: true,
         secure: false,
-        sameSite: 'none',
+        sameSite: 'strict',
         maxAge: 1000 * 60 * 60 * 24 * 7 // 7 days
       });
   

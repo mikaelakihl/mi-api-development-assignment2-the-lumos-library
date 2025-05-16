@@ -64,7 +64,7 @@ export const createBook = async (req: Request, res: Response) => {
 		}
 
 		const book = new Book({
-			content: title,
+			title: title,
 			description: description,
 			author: author,
 			genres: genres,
