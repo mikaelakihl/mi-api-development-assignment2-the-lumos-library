@@ -1,0 +1,258 @@
+[{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "title": "The Midnight Library",
+  "description": "The Midnight Library by Matt Haig is a captivating novel about regret, possibility, and the power of second chances. It follows Nora Seed, a woman who feels like she has nothing left to live for. On the edge of suicide, Nora finds herself in a magical space between life and death—a vast library where each book represents a different version of her life, shaped by the choices she could have made.\n\nGuided by her childhood librarian, Mrs. Elm, Nora explores countless alternate lives: from becoming a glaciologist to a rock star, an Olympic swimmer to a mother. Each path reveals unexpected joys and challenges, forcing her to confront the reality behind her regrets.\n\nAs she journeys through these lives, Nora begins to understand that no life is perfect and that meaning comes not from avoiding mistakes, but from embracing the life you have with honesty and hope.",
+  "author": "Matt Haig",
+  "genres": [
+    "Fiction",
+    "Fantasy",
+    "Philosophical"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81J6APjwxlL.jpg",
+  "published_year": 2020,
+  "reviews": [
+    {
+      "$oid": "681b0e0abace73618a74e8fa"
+    },
+    {
+      "$oid": "6824b4c0eeabccd163a7a020"
+    },
+    {
+      "$oid": "6826e95ac440871e50f6b281"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69522"
+  },
+  "title": "Sapiens: A Brief History of Humankind",
+  "description": "Sapiens by Yuval Noah Harari is a fascinating exploration of the history of the human species, tracing our journey from insignificant apes to the dominant force on Earth. Harari divides this sweeping narrative into four major revolutions—the Cognitive, Agricultural, Unification, and Scientific—that each transformed human society in profound ways.\n\nBeginning 70,000 years ago, the Cognitive Revolution allowed Homo sapiens to imagine, cooperate in large numbers, and spread across the globe. The Agricultural Revolution, while bringing stability, also introduced inequality, hard labor, and social hierarchies. As civilizations grew, religion, empires, and trade began to unify humanity under shared beliefs and systems. Finally, the Scientific Revolution sparked innovation, capitalism, and technological dominance, fundamentally reshaping human life and the planet.\n\nThroughout the book, Harari challenges common assumptions, asking provocative questions about happiness, progress, and what it means to be human. Sapiens invites readers to reflect not just on where we came from, but where we might be headed next.",
+  "author": "Yuval Noah Harari",
+  "genres": [
+    "Non-fiction",
+    "History",
+    "Anthropology"
+  ],
+  "image": "https://m.media-amazon.com/images/I/713jIoMO3UL.jpg",
+  "published_year": 2011,
+  "reviews": [
+    {
+      "$oid": "681b0f0e1c181d51d1475b7d"
+    },
+    {
+      "$oid": "68233faa8dc8b0a53e8b2389"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69523"
+  },
+  "title": "The Great Gatsby",
+  "description": "The Great Gatsby by F. Scott Fitzgerald is a poignant exploration of the American Dream, set against the glittering backdrop of 1920s New York. Through the eyes of narrator Nick Carraway, the novel follows the mysterious and wealthy Jay Gatsby, whose lavish parties and grand mansion conceal a longing for lost love and a past he cannot reclaim.\n\nAt the heart of the story is Gatsby’s obsessive pursuit of Daisy Buchanan, a symbol of beauty, status, and the unattainable. As Gatsby’s dream unravels, Fitzgerald exposes the illusion of wealth as a path to happiness and the moral decay behind the era’s glamour and excess.\n\nThe novel is a meditation on love, identity, and the corrupting influence of money. Fitzgerald challenges the myth of self-made success, revealing a world where class, privilege, and illusion often trump merit and sincerity. The Great Gatsby invites readers to reflect not just on the Roaring Twenties, but on the deeper costs of chasing dreams in a world driven by appearances.",
+  "author": "F. Scott Fitzgerald",
+  "genres": [
+    "Classic",
+    "Fiction",
+    "Drama"
+  ],
+  "image": "https://m.media-amazon.com/images/I/71ZjK3BqlBL._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 1925,
+  "reviews": [
+    {
+      "$oid": "681b120217927af10122fe4b"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69524"
+  },
+  "title": "Atomic Habits",
+  "description": "An easy & proven way to build good habits & break bad ones.",
+  "author": "James Clear",
+  "genres": [
+    "Self-help",
+    "Psychology",
+    "Productivity"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81ANaVZk5LL.jpg",
+  "published_year": 2018,
+  "reviews": [
+    {
+      "$oid": "681b120217927af10122fe4c"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69525"
+  },
+  "title": "1984",
+  "description": "A dystopian social science fiction novel and cautionary tale about the dangers of totalitarianism.",
+  "author": "George Orwell",
+  "genres": [
+    "Dystopian",
+    "Science Fiction",
+    "Political Fiction"
+  ],
+  "image": "https://m.media-amazon.com/images/I/61HkdyBpKOL.jpg",
+  "published_year": 1949,
+  "reviews": [
+    {
+      "$oid": "681b120217927af10122fe4d"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69526"
+  },
+  "title": "To Kill a Mockingbird",
+  "description": "A novel about the serious issues of rape and racial inequality told through the eyes of a child.",
+  "author": "Harper Lee",
+  "genres": [
+    "Classic",
+    "Fiction",
+    "Coming-of-age"
+  ],
+  "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg/1200px-To_Kill_a_Mockingbird_%28first_edition_cover%29.jpg",
+  "published_year": 1960,
+  "reviews": [
+    {
+      "$oid": "681b120217927af10122fe4e"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69527"
+  },
+  "title": "The Alchemist",
+  "description": "A philosophical book about following your dreams and listening to your heart.",
+  "author": "Paulo Coelho",
+  "genres": [
+    "Fiction",
+    "Adventure",
+    "Philosophical"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81FPzmB5fgL._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 1988,
+  "reviews": [
+    {
+      "$oid": "681b136617927af10122fe50"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69528"
+  },
+  "title": "Becoming",
+  "description": "The memoir of former First Lady Michelle Obama.",
+  "author": "Michelle Obama",
+  "genres": [
+    "Biography",
+    "Memoir",
+    "Inspiration"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81cJTmFpG-L._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 2018,
+  "reviews": [
+    {
+      "$oid": "681b136617927af10122fe4f"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb69529"
+  },
+  "title": "The Hobbit",
+  "description": "Bilbo Baggins goes on an unexpected journey to reclaim a treasure guarded by a dragon.",
+  "author": "J.R.R. Tolkien",
+  "genres": [
+    "Fantasy",
+    "Adventure",
+    "Classic"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81hylMcxa3L._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 1937,
+  "reviews": [
+    {
+      "$oid": "681b0e70bace73618a74e8fb"
+    },
+    {
+      "$oid": "681b0f831c181d51d1475b7e"
+    },
+    {
+      "$oid": "68233d97f44a3d3c696f25e2"
+    }
+  ],
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b0a39d5dc10970eb6952a"
+  },
+  "title": "Educated",
+  "description": "A memoir about growing up in a strict and abusive household in rural Idaho and eventually escaping to learn about the wider world through education.",
+  "author": "Tara Westover",
+  "genres": [
+    "Memoir",
+    "Biography",
+    "Inspiration"
+  ],
+  "image": "https://m.media-amazon.com/images/I/71-4MkLN5jL._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 2018,
+  "created_at": {
+    "$date": "2025-05-07T15:40:21.311Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6825c3797053f5fe268491e7"
+  },
+  "title": "Game of Thrones",
+  "description": "YES YES",
+  "author": "George.R.R Martin",
+  "genres": [
+    "action"
+  ],
+  "image": "https://m.media-amazon.com/images/I/81vel6463aL._AC_UF1000,1000_QL80_.jpg",
+  "published_year": 2000,
+  "reviews": [],
+  "created_at": {
+    "$date": "2025-05-15T10:35:37.013Z"
+  },
+  "__v": 0
+}]

@@ -1,0 +1,345 @@
+[{
+  "_id": {
+    "$oid": "681b0e0abace73618a74e8fa"
+  },
+  "name": "cinderella",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 1,
+  "created_at": "Wed May 07 2025 09:38:50 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b0e70bace73618a74e8fb"
+  },
+  "name": "cinderella",
+  "content": "I just finished The Hobbit by J.R.R. Tolkien, and I had a great time with it. It's a charming, adventurous story with rich world-building and memorable characters. Some parts felt a bit slow, but overall it’s a classic that’s fun and surprisingly deep for such a short book.",
+  "rating": 4,
+  "created_at": "Wed May 07 2025 09:40:32 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b0f0e1c181d51d1475b7d"
+  },
+  "name": "belle",
+  "content": "I finally got around to reading Sapiens by Yuval Noah Harari, and it really pulled me in. It’s a fascinating, wide-ranging look at human history, packed with big ideas and sharp insights. A few sections felt dense or speculative, but overall it’s a thought-provoking read that made me see our species in a whole new light.",
+  "rating": 5,
+  "created_at": "Wed May 07 2025 09:43:10 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b0f831c181d51d1475b7e"
+  },
+  "name": "belle",
+  "content": "Picked up The Hobbit by J.R.R. Tolkien and was quickly pulled into its magical world. It’s a delightful adventure with rich storytelling and lovable characters. While the pace lags in spots, the charm and imagination more than make up for it—definitely a classic worth the read.",
+  "rating": 5,
+  "created_at": "Wed May 07 2025 09:45:07 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b120217927af10122fe4b"
+  },
+  "name": "ariel",
+  "content": "Finally got around to reading The Great Gatsby, and it completely lived up to the hype. The writing is gorgeous, the characters are flawed and fascinating, and the ending hit hard.",
+  "rating": 4,
+  "created_at": "Wed May 07 2025 09:55:46 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b120217927af10122fe4c"
+  },
+  "name": "ariel",
+  "content": "Finally got around to reading Atomic Habits, and it was totally worth it. The book is packed with practical strategies for building good habits and breaking bad ones. James Clear does an excellent job of making the science behind habits easy to understand and apply. It’s motivating and gives you actionable steps to improve your life, one small habit at a time. Definitely a game-changer!",
+  "rating": 5,
+  "created_at": "Wed May 07 2025 09:55:46 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b120217927af10122fe4d"
+  },
+  "name": "mulan",
+  "content": "Just wrapped up 1984, and wow, it’s haunting. Orwell’s portrayal of a dystopian world dominated by surveillance and propaganda is still incredibly impactful. The story is unsettling, and the themes of control and truth resonate deeply. It's a tough but important read that really makes you reflect on society and freedom.",
+  "rating": 4,
+  "created_at": "Wed May 07 2025 09:55:46 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b120217927af10122fe4e"
+  },
+  "name": "mulan",
+  "content": "Just finished To Kill a Mockingbird, and it’s a powerful read. Harper Lee tackles serious issues like racism and injustice with a perfect mix of heart and honesty. The characters, especially Atticus Finch, are unforgettable, and the story is both moving and thought-provoking. It’s one of those books that stays with you long after you finish.",
+  "rating": 3,
+  "created_at": "Wed May 07 2025 09:55:46 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b136617927af10122fe4f"
+  },
+  "name": "rapunzel",
+  "content": "I finished Becoming and I loved it. Michelle Obama’s memoir is a captivating journey through her life, filled with raw honesty and powerful insights. From her childhood to her time as First Lady, her story is both inspiring and relatable. It’s a beautifully written account of resilience, self-discovery, and the importance of staying true to yourself.",
+  "rating": 4,
+  "created_at": "Wed May 07 2025 10:01:42 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "681b136617927af10122fe50"
+  },
+  "name": "rapunzel",
+  "content": "Just finished The Alchemist, and it’s a beautifully inspiring read. Paulo Coelho weaves a simple yet profound tale about following your dreams and listening to your heart. The message is uplifting and timeless, reminding you to seek your personal legend. It’s a quick read, but its impact lingers long after you’re done.",
+  "rating": 2,
+  "created_at": "Wed May 07 2025 10:01:42 GMT+0200 (Central European Summer Time)"
+},
+{
+  "_id": {
+    "$oid": "68233e9e6836ace99c2673f9"
+  },
+  "name": "Belle",
+  "content": "I love this book its so good omg",
+  "rating": 4,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-13T12:44:14.799Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68246c1aeeabccd163a79f8e"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 4,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:10:34.302Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682475deeeabccd163a79f97"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 5,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:52:14.026Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682475e7eeabccd163a79f9c"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 2,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:52:23.079Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682475eeeeabccd163a79fa1"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 4,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:52:30.203Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68247766eeabccd163a79fa8"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:58:46.357Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824776deeabccd163a79fad"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 4,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T10:58:53.133Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68249c11eeabccd163a79fbd"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T13:35:13.890Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824a60feeabccd163a79fc2"
+  },
+  "name": "wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T14:17:51.265Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b259eeabccd163a79ff8"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:10:17.949Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b353eeabccd163a79ffd"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 2,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:14:27.290Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b36aeeabccd163a7a002"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:14:50.197Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b379eeabccd163a7a007"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:15:05.894Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b385eeabccd163a7a00c"
+  },
+  "name": "Wiktor Okonski",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 4,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:15:17.292Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b4c0eeabccd163a7a020"
+  },
+  "name": "Wiktor",
+  "content": "I just finished The Midnight Library by Matt Haig, and I really enjoyed it. It's a quick, thoughtful read about regrets and second chances, with a hopeful message. Some parts felt a bit repetitive, but overall it left me reflecting on my own choices in life.",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-14T15:20:32.308Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6826e95ac440871e50f6b281"
+  },
+  "name": "Test",
+  "content": "Jättebra",
+  "rating": 3,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-16T07:29:30.003Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "682717d76084dcfd49bf71a5"
+  },
+  "name": "JUANITO",
+  "content": "THIS BOOK IS GOOD AF",
+  "rating": 5,
+  "book": {
+    "$oid": "681b0a39d5dc10970eb69521"
+  },
+  "created_at": {
+    "$date": "2025-05-16T10:47:51.744Z"
+  },
+  "__v": 0
+}]

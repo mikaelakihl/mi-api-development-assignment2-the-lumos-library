@@ -1,0 +1,161 @@
+[{
+  "_id": {
+    "$oid": "681a20df80e877e49d5e830b"
+  },
+  "username": "cinderella",
+  "password": "glassslipper",
+  "is_admin": "true",
+  "created_at": {
+    "$date": "2025-05-06T14:46:55.752Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681a225e80e877e49d5e830c"
+  },
+  "username": "belle",
+  "password": "beast",
+  "is_admin": "false",
+  "created_at": {
+    "$date": "2025-05-06T14:53:18.576Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681a227880e877e49d5e830d"
+  },
+  "username": "ariel",
+  "password": "underthesea",
+  "is_admin": "false",
+  "created_at": {
+    "$date": "2025-05-06T14:53:44.823Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681a22a280e877e49d5e830e"
+  },
+  "username": "mulan",
+  "password": "mosho",
+  "is_admin": "false",
+  "created_at": {
+    "$date": "2025-05-06T14:54:26.271Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681a22b480e877e49d5e830f"
+  },
+  "username": "rapunzel",
+  "password": "longhairdontcare",
+  "is_admin": "true",
+  "created_at": {
+    "$date": "2025-05-06T14:54:44.005Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b65ae80e877e49d5e8311"
+  },
+  "username": "tiana",
+  "password": "$2b$10$YTqBOyvtzrMoMYxVLSdvdO2.aXaidiT2yOfWb58GTO5doTSt4/Ewq",
+  "is_admin": "true",
+  "created_at": {
+    "$date": "2025-05-07T13:52:46.985Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b7f1980e877e49d5e8312"
+  },
+  "username": "ash",
+  "password": "$2b$10$YDKiZQ8Rlm.QOSqxK/9JwOom9eJ3A1B88bK6PIzR/sdU5Hg5US8hy",
+  "is_admin": "true",
+  "created_at": {
+    "$date": "2025-05-07T15:41:13.274Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "681b866c3f4465dcdd25c316"
+  },
+  "username": "pelle",
+  "password": "$2b$10$TY7yGgmQBvJUlVAJTkUPIeD4nt1no6QnZPQB37CwCcuDzrxhrremS",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-07T16:12:28.826Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "681b8df26dd50b314e98c365"
+  },
+  "username": "cinderellaaa",
+  "password": "$2b$10$tJzeCWWFJLifUfzWWkqMwOJGhSMQWstPzJHyrqb.b2ZNEFuqP8D2m",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-07T16:44:34.951Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68244abce7d2c446b2492908"
+  },
+  "username": "k",
+  "password": "$2b$10$buWncP9N8ZFkc/pISLJ.juhBaeVkEC0B2zLDo76llRLP0eBbw9g8G",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-14T07:48:12.868Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68244b24e7d2c446b249290c"
+  },
+  "username": "snowhite",
+  "password": "$2b$10$Ph2bf48F18G9FgBIv.xPOeqvEYzKL1uNb521jfdhbofoTZ/5RJemS",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-14T07:49:56.849Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6824b3f4eeabccd163a7a019"
+  },
+  "username": "Vik1986",
+  "password": "$2b$10$LTsYRgp1VulWpGSMbcgElerxSXPWXwES6N/5UCT5VFbkAnKF.DR.K",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-14T15:17:08.092Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6825b16baac68fad06418852"
+  },
+  "username": "valentin",
+  "password": "$2b$10$dJH6Qytkzh4DZUt15NziNuUQ4/7zWSXs3tXsKJdApEwHfyH8it6r2",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-15T09:18:35.553Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "6826e8dbc440871e50f6b27b"
+  },
+  "username": "test1",
+  "password": "$2b$10$LwWpHJhIO1Q5KbWCpsChouhxoro02zymem3ZkVVwtREmLHAgQt.m2",
+  "is_admin": false,
+  "created_at": {
+    "$date": "2025-05-16T07:27:23.069Z"
+  },
+  "__v": 0
+}]
