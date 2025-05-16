@@ -65,7 +65,7 @@ onMounted(fetchBooks);
 							<p>{{ book.author }}</p>
 							<p>{{ book.published_year }}</p>
 							<ul class="genres">
-								<li v-for="(genre, i) in book.genres" :key="i">
+								<li class="genres-item" v-for="(genre, i) in book.genres" :key="i">
 									{{ genre }}
 								</li>
 							</ul>
@@ -233,6 +233,14 @@ main {
 			gap: 1rem;
 			font-family: $font-paragraph;
 			font-size: 1rem;
+
+			.genres-item{
+				border: solid $color-white 1px;
+				// background-color: white;
+				// color: $color-primary;
+				padding: 0.5rem;
+				border-radius: $border-small;
+			}
 		}
 		a {
 			color: $color-white;

@@ -223,7 +223,7 @@ main {
       right: 0;
       bottom: 25px;
       path {
-        fill: #BABABA;
+        fill: $color-red;
       }
     }
 
