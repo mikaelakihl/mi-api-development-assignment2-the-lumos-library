@@ -85,3 +85,18 @@ export const loginUser = async (req: Request, res: Response) => {
     }
 };
 
+export const logoutUser = async (req: Request, res: Response) => {
+  try {
+    res.clearCookie('accessToken', {
+      httpOnly: true,
+      secure: false, 
+      sameSite: 'strict'
+    });
+
+    res.status(200).json({ message: 'You are logged out' });
+  } catch (error: unknown) {
+    const message = error instanceof Error ? error.message : 'Unknown error';
+    res.status(500).json({ error: message });
+  }
+};
+
