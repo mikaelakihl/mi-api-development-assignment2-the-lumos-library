@@ -153,6 +153,7 @@ main {
   background-color: $color-background;
   height: 100%;
   width: 100%;
+  margin-bottom: 5rem;
   .top-image {
     width: 100%;
     height: 400px;

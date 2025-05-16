@@ -2,3 +2,6 @@
 
 @use '@/styles/vendor/_normalize' as *;
 
+main {
+    background-color: $color-background;
+}
