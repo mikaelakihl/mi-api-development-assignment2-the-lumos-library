@@ -2,6 +2,8 @@
 import { RouterView, useRoute } from 'vue-router';
 import MenuDesktop from './fixtures/MenuDesktop.vue';
 import MenuMobile from './fixtures/MenuMobile.vue';
+
+import FooterComp from './components/FooterComp.vue';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 
 // const isLoggedIn = ref(true); // TODO: Fixa authentisering
@@ -15,6 +17,7 @@ function checkIfAdminPage() {
 const isAdminPage = computed(checkIfAdminPage);
 
 // -----------------------------------------------------------
+
 
 const isMobile = ref(window.innerWidth <= 767);
 
@@ -38,6 +41,18 @@ onUnmounted(removeResizeListener);
 
 
 <template>
+  <div>
+    <MenuMobile v-if="isMobile" />
+    <MenuDesktop v-else />
+  </div>
+  <RouterView />
+ <nav>
+  <RouterLink to="/">Hem</RouterLink> |
+    <RouterLink to="/sign-in">Logga in</RouterLink>
+ </nav>
+  <footer>
+    <FooterComp/>
+  </footer>
 	<div v-if="!isAdminPage">
 		<MenuMobile v-if="isMobile" />
 		<MenuDesktop v-else />
