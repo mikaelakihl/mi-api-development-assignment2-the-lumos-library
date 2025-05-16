@@ -41,23 +41,16 @@ onUnmounted(removeResizeListener);
 
 
 <template>
-  <div>
-    <MenuMobile v-if="isMobile" />
-    <MenuDesktop v-else />
-  </div>
-  <RouterView />
- <nav>
-  <RouterLink to="/">Hem</RouterLink> |
-    <RouterLink to="/sign-in">Logga in</RouterLink>
- </nav>
-  <footer>
-    <FooterComp/>
-  </footer>
-	<div v-if="!isAdminPage">
+  <div v-if="!isAdminPage">
 		<MenuMobile v-if="isMobile" />
 		<MenuDesktop v-else />
 	</div>
-	<RouterView />
+  	<RouterView />
+
+  <footer>
+    <FooterComp/>
+  </footer>
+	
 </template>
 
 <style >
