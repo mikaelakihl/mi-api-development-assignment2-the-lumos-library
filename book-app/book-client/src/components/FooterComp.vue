@@ -52,7 +52,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 1rem;
+    margin: 0;
     height: 100%;
     color: $color-background;
 }
