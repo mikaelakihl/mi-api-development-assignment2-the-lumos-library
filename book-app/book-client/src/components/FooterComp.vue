@@ -55,6 +55,7 @@
     margin: 0;
     height: 100%;
     color: $color-background;
+    padding: 1rem;
 }
 
 .footer-items{
