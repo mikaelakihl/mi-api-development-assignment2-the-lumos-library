@@ -186,6 +186,7 @@ main {
 		flex-direction: column;
 		justify-content: flex-start;
 		align-items: flex-start;
+		filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.25));
 	}
 	img {
 		// max-width: 30%;
@@ -251,7 +252,7 @@ main {
 @media screen and (min-width: 768px) {
 	.book {
 		margin-inline: 10%;
-		.book-info-container{
+		.book-info-container {
 			padding-left: 4rem;
 		}
 	}
