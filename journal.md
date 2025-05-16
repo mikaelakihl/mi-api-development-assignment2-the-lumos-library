@@ -15,5 +15,15 @@ Continued with our design in Figma and set up Vue in client.
 ## 12/05
 Finished our design in Figma and set up scss-variables and imported fonts. 
 
+## 13/05
+Started the day with meeting and then coded by ourselves. Finished header and menu functionality. Had some trouble with connection with review and book but solved it after a few hours.
 
+## 14/05
+Coded by ourselves. Finished log in page and reused for register page, also finished specifik book page. Begin with footer and adminpanel.
+
+## 15/05 
+Coded by ourselves in the morning and then we did some paircoding. Finished adminpanel for books and user. Fixed bug in login page 
+
+## 16/05 
+Finished footer and had some merge problem in the morning. Solved it right before presentation. Fixed clear cookie in log out. 
 
