@@ -443,6 +443,7 @@ main {
               display: flex;
               flex-direction: column;
               gap: 15px;
+              width: 100px;
             p{
               color: white;
               font-size: 1.5rem;
@@ -459,6 +460,7 @@ main {
             text-transform: capitalize;
             line-height: 20px;
             height: auto;
+            width: 500px;
           }
         }
       }
@@ -563,12 +565,17 @@ main {
               flex-direction: column;
               align-items: center;
               gap: 5px;
+              width: 100%;
+              p{
+                text-align: center;
+              }
               img{
                 width: 200px;
+                
               }
             }
             p{
-              text-align: center;
+              text-align: start;
             }
           }
         }
