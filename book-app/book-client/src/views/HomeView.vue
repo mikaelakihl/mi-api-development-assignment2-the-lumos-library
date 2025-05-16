@@ -312,6 +312,9 @@ main {
 			a {
 				position: absolute;
 				bottom: 3rem;
+				background-color: $color-secondary;
+				color: $color-white;
+				box-shadow: $drop-shadow;
 			}
 		}
 	}
