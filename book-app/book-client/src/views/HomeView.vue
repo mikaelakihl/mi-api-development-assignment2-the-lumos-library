@@ -235,9 +235,9 @@ main {
 			font-size: 1rem;
 		}
 		a {
-			color: $color-black;
+			color: $color-white;
 			font-family: $font-paragraph;
-			background-color: $color-white;
+			background-color: $color-secondary;
 			padding: 0.5rem;
 			border-radius: 8px;
 			border: none;
@@ -245,6 +245,7 @@ main {
 			align-items: center;
 			text-decoration: none;
 			margin-top: 2rem;
+			box-shadow: $drop-shadow;
 		}
 	}
 }
@@ -312,9 +313,7 @@ main {
 			a {
 				position: absolute;
 				bottom: 3rem;
-				background-color: $color-secondary;
-				color: $color-white;
-				box-shadow: $drop-shadow;
+				
 			}
 		}
 	}
