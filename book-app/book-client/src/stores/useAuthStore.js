@@ -52,6 +52,7 @@ const useAuthStore = defineStore('auth', {
         this.isAuthenticated = false
         this.user = null
         this.error = null
+        // localStorage.removeItem('accessToken')
       } catch (err) {
         this.error = err.message || 'An error occurred during logout'
       }

@@ -17,7 +17,7 @@
         </div>
         <div class="footer-items ">
             <RouterLink class="footer-item-routerlink" to="/">Home</RouterLink>
-            <RouterLink class="footer-item-routerlink" to="/books">Books</RouterLink>
+            <RouterLink class="footer-item-routerlink" to="/">Books</RouterLink>
             <RouterLink class="footer-item-routerlink" to="/admin">Admin</RouterLink>
         </div>
         <div class="footer-items">
@@ -55,6 +55,7 @@
     margin: 0;
     height: 100%;
     color: $color-background;
+    padding: 1rem;
 }
 
 .footer-items{

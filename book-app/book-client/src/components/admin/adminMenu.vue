@@ -45,6 +45,7 @@ async function handleLogout() {
   router.push('/') 
 }
 
+
 </script>
 
 <template>
