@@ -42,7 +42,7 @@ const useAuthStore = defineStore('auth', {
 
     async logout() {
       try {
-        const res = await fetch(`${API_URL}auth/logout`, {
+        const res = await fetch(`${API_URL}/auth/logout`, {
           method: 'POST',
           credentials: 'include'
         })
@@ -62,7 +62,7 @@ const useAuthStore = defineStore('auth', {
 
     async register(username, password, is_admin = false) {
       try {
-        const res = await fetch(`${API_URL}auth/register`, {
+        const res = await fetch(`${API_URL}/auth/register`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
