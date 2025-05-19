@@ -5,18 +5,12 @@ import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 
 const app = express();
-const allowedOrigin = 'https://mi-api-development-assignment2-the-lumos-library-client.vercel.app/'
 
 app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: allowedOrigin,
-    credentials: true
-}));
-
-app.options('*', cors({
-    origin: allowedOrigin,
+    origin: 'https://mi-api-development-assignment2-the-lumos-library-client.vercel.app/',
     credentials: true
 }));
 
