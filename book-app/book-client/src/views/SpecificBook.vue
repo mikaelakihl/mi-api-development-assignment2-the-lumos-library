@@ -22,7 +22,7 @@ const successMessage = ref('');
 // retrieved data is assigned to the book ref for rendering in component.
 const fetchBook = async () => {
   try {
-    const response = await axios.get(`${API_URL}books/${bookId}`);
+    const response = await axios.get(`${API_URL}/books/${bookId}`);
     console.log('Book data:', response.data)
     book.value = response.data;
   } catch (error) {
@@ -35,7 +35,7 @@ const fetchBook = async () => {
 const submitReview = async () => {
   try {
     const response = await axios.post(
-      `${API_URL}reviews/books/${bookId}/reviews`,
+      `${API_URL}/reviews/books/${bookId}/reviews`,
       {
         name: form.name,
         content: form.content,
