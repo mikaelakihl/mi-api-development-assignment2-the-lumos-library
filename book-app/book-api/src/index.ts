@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin: 'https://mi-api-development-assignment2-the-lumos-library-client.vercel.app/',
+    origin: 'https://mi-api-development-assignment2-the-lumos-library-client.vercel.app',
     credentials: true
 }));
 
