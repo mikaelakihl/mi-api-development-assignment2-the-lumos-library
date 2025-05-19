@@ -5,11 +5,12 @@ import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 
 const app = express();
+const allowedOrigin = process.env.CLIENT_ORIGIN;
 
 app.use(express.json());
 app.use(cookieParser());
 app.use(cors({
-    origin: "http://localhost:5173",
+    origin: "allowedOrigin",
     credentials: true
 }));
 
