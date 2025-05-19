@@ -12,7 +12,7 @@ import { RouterLink } from 'vue-router';
 			<RouterLink to="/admin-books-add" class="add-new-book-btn"><span class="material-symbols-outlined">add</span>Add new book</RouterLink>
 			<div class="table-container">
 				<AdminTable
-					dbTableName="books"
+					dbTableName="/books"
 					tableHeaderOne="title"
 					tableHeaderTwo="author"
 					tableHeaderThree="genres"

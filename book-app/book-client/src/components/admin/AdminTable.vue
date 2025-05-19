@@ -25,7 +25,7 @@ const fetchData = async () => {
 			throw new Error('Missing dbTableName prop.');
 		}
 		const URL = `${API_URL}/${props.dbTableName}`;
-		console.log('URL: ' + URL.value);
+		console.log('URL: ', + URL);
 		const response = await fetch(URL);
 
 		if (!response.ok) {
