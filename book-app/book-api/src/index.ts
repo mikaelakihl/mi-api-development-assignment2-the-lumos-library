@@ -5,7 +5,7 @@ import cookieParser from 'cookie-parser';
 import mongoose from 'mongoose';
 
 const app = express();
-const allowedOrigin = process.env.CLIENT_ORIGIN;
+const allowedOrigin = 'https://mi-api-development-assignment2-the-lumos-library-client.vercel.app/'
 
 app.use(express.json());
 app.use(cookieParser());
