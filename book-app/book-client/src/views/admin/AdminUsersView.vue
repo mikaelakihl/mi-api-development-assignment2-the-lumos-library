@@ -11,7 +11,7 @@ import AdminTable from '@/components/admin/AdminTable.vue';
 			<h2>Users</h2>
             <div class="table-container">
                 <AdminTable 
-                    dbTableName="/users"
+                    dbTableName="users"
                     tableHeaderOne="username"
                     tableHeaderTwo="password"
                     tableHeaderThree="is_admin"
