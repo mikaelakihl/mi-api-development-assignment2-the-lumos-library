@@ -13,7 +13,7 @@ const searchQuery = ref('');
 const fetchBooks = async () => {
 	try {
 		console.log('1: Initiate fetch');
-		const URL = searchQuery.value ? `${API_URL}books?search=${searchQuery.value}` : `${API_URL}books`;
+		const URL = searchQuery.value ? `${API_URL}/books?search=${searchQuery.value}` : `${API_URL}/books`;
 		console.log('2: Check API-URL' + URL);
 
 		const response = await fetch(URL);
