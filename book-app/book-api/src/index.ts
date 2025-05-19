@@ -9,7 +9,13 @@ const allowedOrigin = process.env.CLIENT_ORIGIN;
 
 app.use(express.json());
 app.use(cookieParser());
+
 app.use(cors({
+    origin: allowedOrigin,
+    credentials: true
+}));
+
+app.options('*', cors({
     origin: allowedOrigin,
     credentials: true
 }));
